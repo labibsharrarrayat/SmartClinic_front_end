@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinic Name</title>
+  <link rel="stylesheet" href="styles/layout.css" />
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="header">
+      <img class="logo" src="src/img/heading.png" alt="ClinicCareLogo" />
+
+      <div class="date-time">
+        <p id="date">May 2, 2020</p>
+        <p id="time">20:05</p>
+      </div>
+
+      <div class="search-bar">
+        <div class="dropdown-box">
+          <input type="text" name="search" autocomplete="off" />
+          <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+          <div class="searchbar-dropdown">
+            <input type="radio" id="search-by-id" name="src" />
+            <label for="search-by-id">Search by ID</label>
+            <br />
+            <br />
+            <input type="radio" id="search-by-name" name="src" />
+            <label for="search-by-name">Search by Name</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-images">
+        <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+
+        <div class="dropdown-notification">
+          <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+          <div class="dropdown-content">
+            <a href="#">You have missed an appointment</a>
+            <a href="#">Clear all notification</a>
+          </div>
+        </div>
+
+        <div class="dropdown-user">
+          <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+          <div class="dropdown-content2">
+            <a href="#">My Profile</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <a href="" onclick=" return false">
+          <div id="arrow-left"></div>
+        </a>
+      </div>
+
+      <a href="#home" class="nav-active"><img src="src/img/patient.svg" />Patients</a>
+      <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+      <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+      <a href=""><img src="src/img/finance.svg" alt="" />Billing</a>
+      <a href=""><img src="src/img/prescription.svg" alt="" />Expenses</a>
+      <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+      <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+      <a href="#clients"><img src="src/img/cash.svg" alt="" />Finance Reports
+      </a>
+      <a href="#contact"><img src="src/img/settings-tools.svg" alt="" />Backup & Table Setup
+      </a>
+    </div>
+
+    <div class="main">main</div>
+  </div>
+  <script type="text/javascript" src="src/js/layout.js"></script>
+  <script type="text/javascript">
+    function toggleSidebar() {
+      document
+        .getElementById("container")
+        .classList.toggle("container-no-sidebar");
+      document.getElementById("sidebar").classList.toggle("active");
+      document.getElementById("arrow-left").classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>
