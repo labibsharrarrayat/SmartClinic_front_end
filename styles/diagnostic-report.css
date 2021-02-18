@@ -1,0 +1,168 @@
+.footer {
+    margin-top: 5px;
+    width: 97%;
+    margin-bottom: 10px;
+}
+
+.box-div {
+    width: 300px;
+    border: 1px solid rgb(112, 112, 112);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.list-box{
+    margin-top: 11px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    width: 320px !important;
+}
+.list-box i{
+    float: right;
+    margin-top: 4px;
+    margin-right: 4px;
+}
+.list-box i:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.box-div-head {
+    background-color: rgba(112, 112, 112, 0.4);
+    padding-left: 10px;
+}
+.plus-icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border:none;
+    background-color: #AAAAAE;
+    float: right;
+    margin-right: 5px;
+    text-align: center;
+}
+.plus-icon i{
+    margin-top: 7px;
+}
+.plus-icon:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.diag-form-inp {
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.drug-div{
+    display: flex;
+    margin-top: 10px;
+}
+.drug-label{
+    width: 36%;
+}
+
+.inp-select{
+    background-color: white;
+    -webkit-filter: drop-shadow(2px 2px 2px gray);
+    filter: drop-shadow(2px 2px 2px gray);
+    border: none;
+    border-radius: 50px;
+    padding: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.inp-select i{
+    font-size: 12px;
+    top: -3px;
+    position: relative;
+    left: 4px;
+}
+.inp-select i:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+/*css for modals*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 35vh;
+    left: 0vh;
+    top: 0vh;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.modalContent3{
+    background: #B3B4C0;
+    margin: auto;
+    margin-top: -10vh;
+    margin-right: 31.2vw;
+    padding: 10px;
+    border: none;
+    width: 322px;
+    height: 154px;
+    border-radius: 55px;
+    padding-top: 15px;
+}
+.modalBtn3{
+    width: 80px;
+    height: 41px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    line-height: 21px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.modalBtn3:hover{
+    opacity: 0.7;
+}
+.form-div-modal3{
+    margin-top: 20px;
+    padding:10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.label-modal3{
+    height: 21px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 16px;
+}
+  /*Scrollbar customization*/
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px grey;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
+  
+  .table-wrapper-scroll-y::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0.6);
+    width: 12px;
+  }
+  
+  .table-wrapper-scroll-y::-webkit-scrollbar-thumb {
+    background: #c9c8c8;
+    border-radius: 10px;
+    width: 12px;
+    height: 100px;
+  }
+  
+  .table-wrapper-scroll-y::-webkit-scrollbar-track {
+    background: rgba(0, 128, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+  }

@@ -1,0 +1,27 @@
+.head-div{
+    text-align: center;
+    text-transform: uppercase;
+}
+.main-body{
+    display: flex;
+    margin-top: 20px;
+}
+.div-btn{
+    border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    background-color: #B597DC;
+    width: 220px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.div-btn:active{
+    background-color: #F6EBBD;
+}
+.div-btn:hover{
+    background-color: #F6EBBD;
+    cursor: pointer;
+}
