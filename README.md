@@ -1,4 +1,6 @@
-As part of clinic web development project, I and my team developed the front end of the website using HTML, CSS and JavaScript. This page illustrates the code and image for some of the pages that were developed. A mobile application relating to this project is shown in my github repository: https://github.com/labibsharrarrayat/SmartClinic. __
+As part of clinic web development project, I and my team developed the front end of the website using HTML, CSS and JavaScript. This page illustrates the code and image for some of the pages that were developed. A mobile application relating to this project is shown in my github repository: https://github.com/labibsharrarrayat/SmartClinic. <br />
+
+
 The developed web pages:**
 
 ![](web_screenshots/p1.JPG)
