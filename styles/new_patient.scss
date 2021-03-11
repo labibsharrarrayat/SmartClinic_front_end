@@ -1,0 +1,129 @@
+.nav-logos:hover {
+    opacity: 0.7;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    max-width: 260px;
+    /*box-shadow: 16px 0px 0px 0px rgba(0, 0, 0, 0.884);*/
+    border-top: 3px solid rgb(61, 61, 61);
+    z-index: 1;
+    right: -2%;
+    transform: translateX(27%);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    font-family: Poppins;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*Second dropdown*/
+
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background: white;
+    max-width: 170px;
+    /*box-shadow: 16px 0px 0px 0px rgba(0, 0, 0, 0.884);*/
+    border-top: 3px solid rgb(61, 61, 61);
+    z-index: 1;
+    right: -2%;
+    transform: translateX(10%);
+}
+
+.dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    font-family: Poppins;
+    text-align: center;
+}
+
+.dropdown-content2 a:hover {
+    background-color: #ddd;
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+//dropdown 3 
+.dropdown3 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content3 {
+    display: none;
+    position: absolute;
+    background: white;
+    max-width: 200px;
+    max-height: 80px;
+    /*box-shadow: 16px 0px 0px 0px rgba(0, 0, 0, 0.884);*/
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    // right: -2%;
+    transform: translateX(10%);
+    margin-top: 6px;
+    input {
+        display: block;
+        height: 12px;
+        width: 12px;
+        float: left;
+        margin-left: 27px;
+        line-height: 2px;
+        margin-right: 5px;
+        font-family: "Poppins", sans-serif;
+    }
+    p {
+        color: black;
+        background: none;
+    }
+}
+
+nav {
+    .dropdown3:hover .dropdown-content3 {
+        display: block;
+    }
+}
+
+//dropdown 3 ends
+//Date
+#month,
+#day,
+#year {
+    font-weight: lighter;
+}
+
+//search button 
+.searching-button:hover {
+    opacity: 0.7;
+}

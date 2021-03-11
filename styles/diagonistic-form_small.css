@@ -1,0 +1,186 @@
+.utext {
+  max-height: 7vh;
+}
+
+.main h1 {
+  left: 50vw !important;
+}
+
+.sidebar {
+  position: absolute;
+  height: 100vh !important;
+}
+
+.lisiting-icon {
+  position: relative;
+  /*right: 33.5vw;*/
+  left: 9.5vw;
+  /*top: 32vh;*/
+  top: 0.3vh;
+}
+
+.slc {
+  background-color: white;
+  display: inline-block;
+  max-width: 10vw;
+  max-height: 4vh;
+  margin-top: 0.5vh;
+}
+
+#pres-box {
+  margin-top: 1.5vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 52.5vh;
+  padding-top: 2vh;
+}
+
+#pres-content {
+  line-height: 1.7vh;
+}
+
+#f-main {
+  margin-top: 0.1vh;
+  -webkit-transform: translateY(-2vh);
+          transform: translateY(-2vh);
+}
+
+footer {
+  margin-top: -16px !important;
+}
+
+@media (max-width: 1500px) and (min-width: 1300px) {
+  footer {
+    margin-top: -25px !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  #pres-content {
+    line-height: 1.2vh;
+  }
+  #pres-box {
+    height: 54vh;
+    padding-top: 2px;
+  }
+  #listing-box {
+    max-height: 80vh;
+  }
+}
+
+@media (max-width: 1500px) {
+  /* footer {
+      margin-top: -4vw !important;
+    } */
+  .insidetext {
+    margin-top: -7px !important;
+  }
+  #listing-box {
+    max-height: 65vh !important;
+  }
+  #plus-icon-attach {
+    margin-top: -4vh;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main h1 {
+    left: 51vw !important;
+  }
+  body {
+    line-height: 1.1;
+  }
+  #f-main {
+    margin-top: -3vh;
+  }
+  #attach-box {
+    margin-bottom: 0;
+  }
+  .insidetext {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  #pres-box {
+    height: 54vh;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1201px) {
+  #content {
+    margin-left: 19% !important;
+  }
+  #pres-content {
+    line-height: 1.7vh;
+  }
+}
+
+@media (max-width: 1350px) and (min-width: 1091px) {
+  .td-title {
+    width: 21.2vw !important;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1090px) {
+  .wrapper {
+    width: 104vw;
+  }
+  .lisiting-icon {
+    right: 31vw;
+  }
+  footer {
+    margin-top: -1vw !important;
+  }
+}
+
+@media (max-width: 1090px) {
+  .main h1 {
+    left: 41vw !important;
+  }
+  .ctext {
+    width: 50% !important;
+  }
+  #cl-button {
+    top: 14% !important;
+  }
+  .cicon {
+    margin-left: 22vw !important;
+  }
+  .ficons {
+    width: 4.7vw !important;
+  }
+  .lisiting-icon {
+    right: 40vw;
+  }
+  .inp-icon {
+    width: 74% !important;
+  }
+  #drug-icon {
+    width: 50% !important;
+  }
+  .c1_select {
+    max-width: 58% !important;
+    padding-top: 0px;
+  }
+  .c1_field {
+    width: 36% !important;
+  }
+  .insidetext {
+    margin-right: -3vw;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+  body {
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 800px) {
+  .main h1 {
+    left: 40vw;
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=diagonistic-form_small.css.map */

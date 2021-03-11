@@ -1,0 +1,430 @@
+.main h1 {
+  /* margin-left: 60vh; */
+  text-transform: uppercase;
+  font-size: 4.5vh;
+  font-weight: 600;
+  margin-bottom: 3vh;
+  width: 57%;
+  text-align: right;
+  margin-left: 4vw;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.status {
+  width: 33%;
+  margin-left: 2vh;
+}
+
+.status #date1 {
+  position: absolute;
+  margin: 0.3vh 6.8vw;
+  color: gray;
+}
+
+.status #date2 {
+  position: absolute;
+  margin: 0.4vh 6.7vw;
+  color: gray;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col-40 {
+  width: 40%;
+}
+
+.col-20 {
+  width: 5%;
+  margin-right: 7vw;
+  margin-left: 0vh;
+  margin-bottom: 2vh;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+.col-10 {
+  width: 1%;
+  font-weight: lighter;
+  margin-left: 0vw;
+  margin-bottom: 2vh;
+}
+
+.col-30 {
+  width: 30%;
+}
+
+.col-35 {
+  width: 35%;
+}
+
+.col-40 {
+  width: 27%;
+}
+
+.text-gray-light {
+  color: rgba(68, 66, 66, 0.54);
+}
+
+input.date {
+  border: none;
+  border-radius: 20px;
+  width: 35%;
+  padding-left: 15px;
+  margin-right: -7vw;
+  margin-left: 2vw;
+}
+
+select.day {
+  border: 0;
+  background-color: unset;
+  margin-left: -0.2vw;
+  margin-right: 2vw;
+  width: 25%;
+}
+
+.ml-1 {
+  position: relative;
+  left: 5%;
+  font-weight: lighter;
+  margin-top: -3px;
+  height: 25px;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-5px {
+  margin-top: -2px;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 47vw;
+  position: relative;
+  top: -3vh;
+  left: 60vh;
+}
+
+.icn {
+  height: 3vh;
+}
+
+/* width */
+.scrollDiv::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.scrollDiv::-webkit-scrollbar-track {
+  background: unset;
+}
+
+/* Handle */
+.scrollDiv::-webkit-scrollbar-thumb {
+  background: #ACA1D4;
+  border-radius: 20px;
+}
+
+.scrollDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2vh;
+  overflow-y: auto;
+  height: 63vh;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.scrollDiv .content2 {
+  width: 96%;
+  height: 8vh;
+  background: rgba(255, 250, 250, 0.8);
+  margin-bottom: 2vh;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scrollDiv .content2 #ID,
+.scrollDiv .content2 #name,
+.scrollDiv .content2 #time,
+.scrollDiv .content2 #docName,
+.scrollDiv .content2 #status {
+  font-size: 2.3vh;
+}
+
+.scrollDiv .content2 #time {
+  margin-left: 0.7vw;
+}
+
+.scrollDiv .content2 #ID {
+  font-weight: bold;
+}
+
+.scrollDiv .content2 #status {
+  border-radius: 50px;
+  border-color: #00000000;
+  background-color: #ffffff00;
+  height: 30px;
+  margin-top: 2.2vh;
+}
+
+.scrollDiv .content2 select option {
+  margin: 60px;
+  background: rgba(134, 134, 134, 0.3);
+  color: black;
+}
+
+.scrollDiv .content2 #date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scrollDiv .content2 #date #date1 {
+  font-size: 2.3vh;
+  line-height: 2.6vh;
+  margin-bottom: 2vh;
+  margin-left: -1.5vh;
+}
+
+.scrollDiv .content2 #date #dayName {
+  font-size: 2.3vh;
+  line-height: 1vh;
+  margin-left: -1.5vh;
+}
+
+.scrollDiv .content2 .leftContent {
+  width: 27%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  line-height: 8vh;
+}
+
+.scrollDiv .content2 .rightContent {
+  width: 70%;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  line-height: 8vh;
+  position: relative;
+  left: 8vh;
+}
+
+.scrollDiv .content2 .leftContent,
+.scrollDiv .content2 .rightContent {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.scrollDiv .content {
+  width: 96%;
+  height: 8vh;
+  background: rgba(255, 250, 250, 0.8);
+  margin-bottom: 2vh;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scrollDiv .content #ID,
+.scrollDiv .content #name,
+.scrollDiv .content #time,
+.scrollDiv .content #docName,
+.scrollDiv .content #status {
+  font-size: 2.3vh;
+}
+
+.scrollDiv .content #time {
+  margin-left: 1vw;
+}
+
+.scrollDiv .content #ID {
+  font-weight: bold;
+}
+
+.scrollDiv .content #status {
+  border-radius: 50px;
+  border-color: #00000000;
+  background-color: #ffffff00;
+  height: 30px;
+  margin-top: 2.2vh;
+}
+
+.scrollDiv .content select option {
+  margin: 60px;
+  background: rgba(134, 134, 134, 0.3);
+  color: black;
+}
+
+.scrollDiv .content #date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scrollDiv .content #date #date1 {
+  font-size: 2.3vh;
+  line-height: 2.6vh;
+  margin-bottom: 2vh;
+  margin-left: -1.5vh;
+}
+
+.scrollDiv .content #date #dayName {
+  font-size: 2.3vh;
+  line-height: 1vh;
+  margin-left: -1.5vh;
+}
+
+.scrollDiv .content .leftContent {
+  width: 27%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  line-height: 8vh;
+}
+
+.scrollDiv .content .rightContent {
+  width: 70%;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  line-height: 8vh;
+  position: relative;
+  left: 8vh;
+}
+
+.scrollDiv .content .leftContent,
+.scrollDiv .content .rightContent {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#cl-button {
+  position: absolute;
+  right: 2vw;
+  top: 17vh;
+  margin-top: 0.4vh;
+  color: gray;
+  position: absolute;
+}
+
+#cl-button:hover {
+  opacity: 0.7;
+}
+
+.datepicker {
+  background-color: unset !important;
+}
+
+.datepickers-container {
+  z-index: 200000 !important;
+  left: -50px !important;
+}
+
+.datepicker--nav {
+  max-height: 30px !important;
+  padding: 4px 0 !important;
+  margin-bottom: 4px !important;
+}
+
+.datepicker--content {
+  background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-title {
+  padding: 6px !important;
+  border: 1px solid #333 !important;
+  background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-action {
+  border: 1px solid #333 !important;
+  background-color: #FFFDC2 !important;
+  width: 60px !important;
+}
+
+.datepicker--content {
+  border: 1px solid #333 !important;
+}
+
+.datepicker--day-name {
+  color: #444242 !important;
+}
+
+@media screen and (max-width: 969px) {
+  .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 57vw;
+    position: relative;
+    top: -3vh;
+    left: 40vh;
+  }
+  #status {
+    margin-right: 5.5vh;
+  }
+  #name,
+  #docname {
+    margin-left: 1vh;
+  }
+}
+/*# sourceMappingURL=appointment-list.css.map */

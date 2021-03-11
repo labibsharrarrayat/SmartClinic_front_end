@@ -1,0 +1,280 @@
+.w{
+    width:5.2vw;
+}
+.x{
+    width: 12vw; /*item code*/
+}
+.y{
+    width:22vw; /*item name*/
+}
+.z{
+    width:20vw;     /*expiry date*/
+}
+
+.no-head{
+    width:5.2vw;
+}
+.item-code-head{
+    width: 12vw; /*item code*/
+}
+.item-name-head{
+    width:22vw;
+}
+.expiry-date-head{
+    width:20vw;
+}
+
+
+
+
+/*the print modal*/
+.printmodal-content {
+    width: 28vw;
+    margin-left: 40vw;
+}
+.printmodal-content .prints2{
+    left: 8.5vw;
+}
+.printmodal-content .prints1{
+    left: 17vw;
+}
+
+@media (max-height:600px){
+    .table-fix {
+        width: 77vw;
+        height: 34vh;
+    }
+    .updown{
+        font-size: 11px;
+    }
+}
+@media (min-width:1400px) and (max-height:685px){
+    .table-fix {
+        width: 77vw;
+        height: 34vh;
+    }
+    .updown{
+        font-size: 11px;
+    }
+}
+@media (max-width:1350px) and (min-width:1200px){
+    /* for patient search */
+    .patient-search #epi{
+        width: 14vw;
+    }
+    .patient-search #spi{
+        width: 14vw;
+    }
+    .patient-search button{
+        left:59vw;
+        width: 14vw;
+    }
+    .tabl{
+        margin-top: 8%;
+    }
+}
+@media (max-width:1200px) and (min-width:1090px){
+        /* for table */
+    #content{
+        width: 77%;
+    }
+    .tbl{
+        width: 94%;
+    }
+    .tabl{
+        margin-top: 10%;
+        width:92%;
+    }
+    .table-fix {
+        width: 73vw;
+    }
+    .table2 {
+        width: 73vw;
+    }
+    .heading-table {
+        width: 73vw;
+    }
+    /* for patient search */
+
+    .patient-search #epi{
+        width: 14vw;
+    }
+    .patient-search #spi{
+        width: 14vw;
+    }
+    .patient-search button{
+        left:59vw;
+        width: 14vw;
+    }
+
+    /*footer*/
+    .footer-icons{
+        padding-left: 79% !important;
+    }
+    .d{
+        width: 4.7vw;
+        top: 86.5vh;
+        left: 73vw;
+    }
+
+}
+
+
+
+
+/* queries when sidebar collapsed */
+@media (max-width:1090px){
+    /*the print modal*/
+    .printmodal-content{
+        width:32vw;
+        margin-left:35vw;
+    }
+    .printmodal-content .prints2{
+        left: 11.5vw;
+    }
+    .printmodal-content .prints1{
+        left: 20vw;
+    }
+
+    /*the table*/
+    .w{
+        width:5.2vw;
+    }
+    .x{
+        width: 15vw; /*item code*/
+    }
+    .y{
+        width:25.8vw; /*item name*/
+    }
+    .z{
+        width:20vw;     /*expiry date*/
+    }
+    
+    .no-head{
+        width:5.2vw;
+    }
+    .item-code-head{
+        width: 15vw; /*item code*/
+    }
+    .item-name-head{
+        width:25.8vw;
+    }
+    .expiry-date-head{
+        width:20vw;
+    }
+    /* for table */
+    .table2 {
+        width: 93vw;
+    }
+    .table-fix {
+        width: 93vw;
+    }
+    .tabl {
+        margin-top: 10%;
+        width: 95%;
+    }
+    .tbl > h1 {
+        font-size: 2.8vw;
+    }
+
+    /* for patient search */
+
+    .patient-search button{
+        left:70vw;
+        width: 16vw;
+    }
+    .patient-search #epi{
+        width: 19vw;
+    }
+    .patient-search #spi{
+        width: 19vw;
+    }
+
+
+    /* for footer */
+    .barcode{
+        height: 6.5vh;
+        width: 12vw;
+        left:45vw
+    }
+    .d{
+        top: 86.5vh;
+        width: 5.1vw;
+        height: 7.7vh;
+        left:65vw;
+    }
+    
+}
+@media (max-width:1000px){
+        /* for footer */
+    .d{
+        top: 86.5vh;
+        width: 5.9vw;
+        height: 7.9vh;
+        left:64vw;
+    }
+    .d a img {
+        width: 2.9vw;
+    }
+}
+
+@media (max-width:1090px) and (min-width:900px){
+     /* for footer */
+    .footer-icons{
+        padding-left: 72% !important;
+    }
+    .barcode{
+        width: 14vw;
+    }
+
+
+    /* for patient search */
+    .patient-search button{
+        width: 18vw;
+    }
+    .patient-search #epi{
+        width: 17vw;
+    }
+    .patient-search #spi{
+        width: 17vw;
+    }
+}
+@media (max-width:1090px) and (min-width:1000px){
+    /* for patient search */
+    .patient-search #epi{
+        width: 16vw;
+    }
+    .patient-search #spi{
+        width: 16vw;
+    }
+}
+@media (max-width:800px){
+    .patient-search #spis{
+        right:0vh;
+    }
+    .patient-search #epi{
+        right:0vh;
+    }
+    .patient-search #epis{
+        right: 0vh;
+    }
+    .d {
+        width: 6.9vw;
+        height: 6.9vw;
+    }
+
+    /*for print modal*/
+    .printmodal-content {
+        width: 37vw;
+        margin-left: 32vw;
+    }
+    .printmodal-content .prints1 {
+        left: 24vw;
+    }
+    .printmodal-content .prints2 {
+        left: 15.5vw;
+    }
+    .printmodal-content button{
+        width:8vw;
+    }
+}

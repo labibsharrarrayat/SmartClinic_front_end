@@ -1,0 +1,768 @@
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#show-today {
+  line-height: 1.9vh;
+  font-size: 1.7vh;
+  font-weight: lighter;
+  position: relative;
+  bottom: 20%;
+}
+
+#show-today-select {
+  margin-right: 1vw;
+  width: 2vh;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 5px 10px rgba(180, 173, 227, 0);
+  box-shadow: 5px 10px rgba(180, 173, 227, 0);
+}
+
+.table-fix {
+  width: 77vw;
+  position: absolute;
+  height: 46vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.heading-table {
+  width: 77vw;
+  height: 40px;
+}
+
+.table2 {
+  width: 77vw;
+  height: 100%;
+}
+
+thead {
+  font-size: 5vh;
+  background: #b1b1b1;
+  text-align: center;
+}
+
+tbody {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.patient-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  margin-left: 3px;
+  margin: 10px;
+}
+
+.patient-search select {
+  border: none;
+}
+
+.main {
+  position: absolute;
+  width: 80%;
+}
+
+.tabl {
+  position: absolute;
+  width: 98%;
+  margin-top: 6%;
+  text-transform: uppercase;
+}
+
+.tbl {
+  margin-left: 20px;
+}
+
+.tbl h1 {
+  width: 16vw;
+  padding-left: 2vw;
+}
+
+td {
+  border: solid 1px rgba(255, 0, 0, 0);
+  padding: 0mm;
+  font-size: 2vh;
+}
+
+th {
+  position: -webkit-sticky;
+  position: sticky;
+  border-bottom: black;
+  background: #b1b1b1;
+  font-size: 2vh;
+}
+
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+  border-right: solid 1px #3b3d3d;
+  border-bottom: solid 1px rgba(255, 0, 0, 0);
+}
+
+.thd {
+  border-bottom: solid 3px black;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+tr:hover {
+  background: #B4ADE3;
+}
+
+#col-id {
+  padding-right: 3vw;
+}
+
+#col-name {
+  padding-right: 2vw;
+}
+
+.no-head {
+  width: 5.2vw;
+  padding-bottom: 0.48%;
+}
+
+.item-code-head {
+  width: 11vw;
+}
+
+.item-name-head {
+  width: 15.8vw;
+  padding-top: 3px;
+}
+
+.expiry-date-head {
+  width: 30vw;
+}
+
+.stock-head {
+  border-right: none;
+  padding-bottom: 0.3%;
+}
+
+.patient-search {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.patient-search button {
+  width: 13vw;
+  height: 6.5vh;
+  border-radius: 24px;
+  border: none;
+  color: black;
+  font-weight: 600;
+  background: #B7AEE4;
+  letter-spacing: 1px;
+  font-size: 15px;
+  position: absolute;
+  left: 63vw;
+  top: 0.2%;
+}
+
+.patient-search button:hover {
+  opacity: 0.8;
+}
+
+.patient-search #spi {
+  position: relative;
+  width: 11vw;
+}
+
+.patient-search #epi {
+  position: relative;
+  right: 2vh;
+  width: 11vw;
+}
+
+.patient-search p {
+  font-weight: 500;
+}
+
+.patient-search p {
+  margin-top: 29px;
+}
+
+.patient-search #spis {
+  position: relative;
+  right: 2vh;
+  margin-top: 26px;
+  -webkit-filter: drop-shadow(0px 1px 1px gray);
+  filter: drop-shadow(0px 1px 1px gray);
+}
+
+.patient-search #epis {
+  position: relative;
+  right: 4.7vh;
+  margin-top: 26px;
+  -webkit-filter: drop-shadow(0px 1px 1px gray);
+  filter: drop-shadow(0px 1px 1px gray);
+}
+
+.patient-search input {
+  width: 125px;
+  height: 28px;
+  border-radius: 50px;
+  margin-top: 25px;
+  border: solid 1px rgba(0, 0, 0, 0);
+  -webkit-filter: drop-shadow(0px 1px 1px gray);
+  filter: drop-shadow(0px 1px 1px gray);
+}
+
+.patient-search #label-1 {
+  margin-right: 1vw;
+  width: 2vw;
+}
+
+.patient-search #label-2 {
+  margin-right: 1vw;
+  width: 1vw;
+}
+
+.patient-search #input-label-1 {
+  margin-right: 1vw;
+}
+
+.patient-search #input-label-2 {
+  margin-right: 1vw;
+}
+
+#gap {
+  background: rgba(0, 128, 0, 0);
+  width: 15vw;
+  height: 2vh;
+  position: relative;
+  margin-top: 30px;
+}
+
+#dateicon1 {
+  position: relative;
+  color: gray;
+  top: 28px;
+  right: 38px;
+}
+
+#dateicon2 {
+  position: relative;
+  color: gray;
+  right: 36px;
+  top: 28px;
+}
+
+select {
+  width: 125px;
+  height: 28px;
+  border-radius: 50px;
+  margin-top: 22px;
+}
+
+.tbl h1 {
+  margin-left: 38.9%;
+  font-size: 4.5vh;
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+.footer-icons {
+  top: 86vh;
+}
+
+.table-wrapper-scroll-y::-webkit-scrollbar {
+  background: rgba(255, 255, 255, 0.6);
+  width: 12px;
+}
+
+.table-wrapper-scroll-y::-webkit-scrollbar-thumb {
+  background: #c9c8c8;
+  border-radius: 10px;
+  width: 12px;
+  height: 100px;
+}
+
+.table-wrapper-scroll-y::-webkit-scrollbar-track {
+  background: rgba(0, 128, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.updown {
+  float: right;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  clear: right;
+  font-size: 13px;
+  line-height: 3px;
+  margin-right: 10px;
+}
+
+/* .active, */
+.btn:hover {
+  background-color: rgba(145, 145, 145, 0.5);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 35vh;
+  left: 0vh;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.printmodal-content {
+  background: #b1b1b1;
+  margin: auto;
+  padding: 3vh;
+  border: none;
+  width: 23.5vw;
+  /* height: 26vh; */
+  height: 28vh;
+  border-radius: 7vh;
+  margin-left: 43vw;
+}
+
+.printmodal-content .printp {
+  margin-top: 2.5vh;
+  line-height: 4vh;
+  font-size: 2.5vh;
+  font-weight: 500;
+}
+
+.printmodal-content .prints1 {
+  position: relative;
+  left: 12vw;
+  top: -15.5vh;
+  height: 5vh;
+  width: 8vw;
+  border-radius: 0;
+}
+
+.printmodal-content .prints2 {
+  position: relative;
+  left: 3.76vw;
+  top: -9vh;
+  height: 5vh;
+  width: 8vw;
+  border-radius: 0;
+}
+
+.printmodal-content button {
+  /* position: absolute; */
+  position: absolute;
+  width: 6vw;
+  height: 4.5vh;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: #555050;
+  font-size: 2vh;
+  font-weight: 600;
+  margin-top: -5vh;
+  margin-left: -3vw;
+  /* margin-top: 2vh;
+      left: 105vh; */
+}
+
+.printmodal-content button:hover {
+  opacity: 0.7;
+}
+
+.deletemodal {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.deletemodal-content {
+  background: #b1b1b1;
+  margin: auto 45vw;
+  padding: 1.3vh;
+  border: none;
+  width: 21vw;
+  height: 20vh;
+  border-radius: 6vh;
+}
+
+.deletemodal-content .delp {
+  font-size: 2vh;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.deletemodal-content button {
+  width: 5vw;
+  height: 5.25vh;
+  border-radius: 1vh;
+  border: none;
+  background: white;
+  font-size: 2vh;
+}
+
+.deletemodal-content #btn1,
+.deletemodal-content #btn2 {
+  display: inline-block;
+  margin: 1vh 1vh;
+  outline-style: none;
+}
+
+.deletemodal-content #btn1 {
+  margin-left: 4.5vw;
+}
+
+.deletemodal-content .btn:hover {
+  background: #5c5c5c;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .colwidth1 {
+    width: 7.3%;
+  }
+  .colwidth2 {
+    width: 20.9%;
+  }
+  .colwidth3 {
+    width: 51.4%;
+  }
+  .colwidth4 {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .tbl > h1 {
+    font-size: 1.8vw;
+  }
+  .table-fix {
+    width: 98%;
+    position: absolute;
+    height: 330px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .patient-search {
+    top: 7vh;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #gap {
+    width: 8vw;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1300px) {
+  .table-fix {
+    width: 77vw;
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .tbl > h1 {
+    font-size: 1.8vw;
+  }
+  .table-fix {
+    width: 77vw;
+    height: 260px;
+  }
+  .patient-search {
+    top: 7vh;
+  }
+}
+
+/*.calendar {
+      position: absolute;
+      height: auto;
+      background-color: rgb(255, 253, 194); 
+      z-index: 10000;
+      right: 50px;
+      margin-top: 4%;
+  }
+  
+  .calendar.show {
+      display: block;
+  }
+  
+  .calendar.hidden {
+      display: none;
+  }*/
+/* calendar */
+.datepicker {
+  background-color: unset !important;
+}
+
+.datepickers-container {
+  z-index: 200000 !important;
+  left: -50px !important;
+}
+
+.datepicker--nav {
+  max-height: 30px !important;
+  padding: 4px 0 !important;
+  margin-bottom: 4px !important;
+}
+
+.datepicker--content {
+  background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-title {
+  padding: 6px !important;
+  border: 1px solid #333 !important;
+  background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-action {
+  border: 1px solid #333 !important;
+  background-color: #FFFDC2 !important;
+  width: 60px !important;
+}
+
+.datepicker--content {
+  border: 1px solid #333 !important;
+}
+
+.datepicker--day-name {
+  color: #444242 !important;
+}
+
+.barcode {
+  position: absolute;
+  top: 88vh;
+  left: 53vw;
+  background: #a5a5a5;
+  height: 5.5vh;
+  width: 9vw;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.barcode:hover {
+  opacity: 0.9;
+}
+
+.d {
+  position: absolute;
+  width: 3.7vw;
+  height: 7.7vh;
+  background: #979797;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: 87vh;
+  left: 80vw;
+}
+
+.d a img {
+  width: 1.9vw;
+}
+
+.d:hover {
+  background-color: rgba(117, 115, 115, 0.37);
+  -webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1400px) {
+  .col-20 {
+    width: 4.5vw;
+  }
+  .barcode {
+    font-size: 1.9vh;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .barcode {
+    font-size: 1.9vh;
+  }
+}
+
+@media (max-width: 1350px) and (min-width: 1200px) {
+  /* for patient search */
+  .patient-search #epi {
+    width: 14vw;
+  }
+  .patient-search #spi {
+    width: 14vw;
+  }
+  .patient-search button {
+    left: 59vw;
+    width: 14vw;
+  }
+  .tabl {
+    margin-top: 8%;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1090px) {
+  /* for table */
+  #content {
+    width: 77%;
+  }
+  .tbl {
+    width: 94%;
+  }
+  .tabl {
+    margin-top: 10%;
+    width: 92%;
+  }
+  .table-fix {
+    width: 73vw;
+  }
+  .table2 {
+    width: 73vw;
+  }
+  .heading-table {
+    width: 73vw;
+  }
+  /* for patient search */
+  .patient-search #epi {
+    width: 14vw;
+  }
+  .patient-search #spi {
+    width: 14vw;
+  }
+  .patient-search button {
+    left: 59vw;
+    width: 14vw;
+  }
+  /*footer*/
+  .footer-icons {
+    padding-left: 79% !important;
+  }
+  .d {
+    width: 4.7vw;
+    top: 86.5vh;
+    left: 73vw;
+  }
+}
+
+/* queries when sidebar collapsed */
+@media (max-width: 1090px) {
+  /* for table */
+  .table2 {
+    width: 93vw;
+  }
+  .table-fix {
+    width: 93vw;
+  }
+  .tabl {
+    margin-top: 10%;
+    width: 95%;
+  }
+  .tbl > h1 {
+    font-size: 2.8vw;
+  }
+  /* for patient search */
+  .patient-search button {
+    left: 70vw;
+    width: 16vw;
+  }
+  .patient-search #epi {
+    width: 19vw;
+  }
+  .patient-search #spi {
+    width: 19vw;
+  }
+  /* for footer */
+  .barcode {
+    height: 6.5vh;
+    width: 12vw;
+    left: 45vw;
+  }
+  .d {
+    top: 86.5vh;
+    width: 5.1vw;
+    height: 7.7vh;
+    left: 65vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* for footer */
+  .d {
+    top: 86.5vh;
+    width: 5.9vw;
+    height: 7.9vh;
+    left: 64vw;
+  }
+  .d a img {
+    width: 2.9vw;
+  }
+}
+
+@media (max-width: 1090px) and (min-width: 900px) {
+  /* for footer */
+  .footer-icons {
+    padding-left: 72% !important;
+  }
+  .barcode {
+    width: 14vw;
+  }
+  /* for patient search */
+  .patient-search button {
+    width: 18vw;
+  }
+  .patient-search #epi {
+    width: 17vw;
+  }
+  .patient-search #spi {
+    width: 17vw;
+  }
+}
+
+@media (max-width: 1090px) and (min-width: 1000px) {
+  /* for patient search */
+  .patient-search #epi {
+    width: 16vw;
+  }
+  .patient-search #spi {
+    width: 16vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .patient-search button {
+    font-size: 1.8vh;
+    top: -4.5vh;
+  }
+  .patient-search #epi {
+    width: 22vw;
+  }
+  .patient-search #spi {
+    width: 22vw;
+  }
+}
+/*# sourceMappingURL=inventory.css.map */

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/layout_small.css" />
+
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/medical-hist.css">
+    <link rel="stylesheet" href="styles/medical-hist_small.css">
+    <link rel="icon" href="src/img/doctor.ico" />
+    <link rel="stylesheet" href="styles/footer-icons.css">
+    <!--<link rel="stylesheet" href="./styles/settings.css">-->
+
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Finance Report</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Prescription Report</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts</a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup</a>
+    </div>
+    <div class="main" id="content">
+        <div id="cl-button">
+            <a href="#"><i class="fas fa-times-circle" style="font-size:30px;color:rgb(66, 65, 65);"></i></a>
+        </div>
+        <h1>MEDICAL HISTORY</h1>
+        <div class="medical-form">
+            <div class="d-grid">
+                <div class="d-grid">
+                    <div class="d-flex">
+                        <div class="col-12">
+                            Illness
+                        </div>
+                        <div class="col-15">
+                            <input type="radio">
+                            <label for="diabetes">Diabetes</label>
+                        </div>
+                        <div class="col-25">
+                            <input type="radio">
+                            <label for="Heart">Heart Patient</label>
+                        </div>
+                        <div class="col-20">
+                            <input type="radio">
+                            <label for="Migraine">Migraine</label>
+                        </div>
+                        <div class="col-25">
+                            <input type="radio">
+                            <label for="Blood">Blood Pressure</label>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-1">
+                        <div class="col-12">
+                            <span></span>
+                        </div>
+                        <div class="col-15">
+                            <input type="radio">
+                            <label for="Lungs">Lungs</label>
+                        </div>
+                        <div class="col-25">
+                            <input type="radio">
+                            <label for="Tuberculosis">Tuberculosis</label>
+                        </div>
+                        <div class="col-40">
+                            <div class="d-flex ">
+                                <div class="col-25">
+                                    <input type="radio">
+                                    <label for="Other">Others</label>
+                                </div>
+                                <input type="text" class="input-fild">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex mb-1">
+                    <div class="col-12">
+                        Smoking
+                    </div>
+                    <div class="col-15">
+                        <input type="radio">
+                        <label for="Never">Never</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="radio">
+                        <label for="Occational">Occational</label>
+                    </div>
+                    <div class="col-20">
+                        <input type="radio">
+                        <label for="Habitual">Habitual</label>
+                    </div>
+                </div>
+                <div class="d-flex mb-1">
+                    <div class="col-12">
+                        Drinking
+                    </div>
+                    <div class="col-15">
+                        <input type="radio">
+                        <label for="Never">Never</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="radio">
+                        <label for="Occational">Occational</label>
+                    </div>
+                    <div class="col-20">
+                        <input type="radio">
+                        <label for="Habitual">Habitual</label>
+                    </div>
+                </div>
+                <div class="d-flex mb-1">
+                    <div class="col-12">
+                        Tobacco
+                    </div>
+                    <div class="col-15">
+                        <input type="radio">
+                        <label for="Never">Never</label>
+                    </div>
+                    <div class="col-25">
+                        <input type="radio">
+                        <label for="Occational">Occational</label>
+                    </div>
+                    <div class="col-20">
+                        <input type="radio">
+                        <label for="Habitual">Habitual</label>
+                    </div>
+
+                </div>
+                <div class="d-flex">
+                    <div class="col-12-group">
+                        Allergies
+                    </div>
+                    <div class="d-grid ml-10">
+                        <div class="d-flex">
+                            <div class="col-10">
+                                <input type="radio">
+                                <label for="others">Others</label>
+                            </div>
+                            <input type="text" class="input-fild w-43">
+                        </div>
+                        <div class="d-flex">
+                            <div class="col-10">
+                                <input type="radio">
+                                <label for="Food">Food</label>
+                            </div>
+                            <input type="text" class="input-fild w-75">
+                        </div>
+                        <div class="d-flex">
+                            <div class="col-10">
+                                <input type="radio">
+                                <label for="Drug">Drug</label>
+                            </div>
+                            <input type="text" class="input-fild w-75">
+                        </div>
+                        <div class="d-flex mb-2">
+                            <div class="col-10">
+                                <input type="radio">
+                                <label for="others">Others</label>
+                            </div>
+                            <input type="text" class="input-fild w-75">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<footer>
+            <div class="patientFooter">
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot" style="background: black;"></span>
+                </div>
+                <div class="c" style="margin-right:1%;">
+                    <a href=" "><img src="src/img/writing.png" alt=""></i>
+                    </a>
+                </div>
+
+                <div class="c" style="margin-right:1%;">
+                    <a href=" "><img src="src/img/printer.png" alt=""></i>
+                    </a>
+                </div>
+                <div class="c" style="margin-right:1%;">
+                    <a href=" "><img src="src/img/rubbish-bin.png" alt=""></i>
+                    </a>
+                </div>
+            </div>
+        </footer>-->
+
+
+
+    </div>
+    <div class="footer-icons3">
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot" style="background: black;"></span>
+        </div>
+        <div class="c" style="margin-right:6%;">
+            <a href=" "><img src="src/img/writing.png" alt=""></i>
+            </a>
+        </div>
+
+        <div class="c" style="margin-right:6%;" id="printerbtn">
+            <a><img src="src/img/printer.png" alt="" class="icon-20" />
+            </a>
+        </div>
+        <div class=" c " style="margin-right:3%; " id="dlbtn">
+            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+        </div>
+
+    </div>
+
+
+
+    <script src="src/js/loggedin.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>

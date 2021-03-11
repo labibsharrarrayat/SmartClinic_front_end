@@ -1,0 +1,466 @@
+.main h1 {
+    text-transform: uppercase;
+    font-size: 4.5vh;
+    font-weight: 600;
+    margin-bottom: 3vh;
+    /* width: 57%; */
+    text-align: right;
+    text-shadow: 1px 1px grey;
+}
+
+#main-content {
+    margin-top: 2px;
+}
+
+#cl-button {
+    top: 15vh;
+    right: 9vw;
+    color: gray;
+    position: absolute !important;
+}
+
+#cl-button:hover {
+    opacity: 0.7;
+}
+
+.footer-icons {
+    margin-top: 1vh;
+}
+
+.part-2 {
+    width: 60%;
+}
+
+.border-5 {
+    border-radius: 5%;
+}
+
+.int-fd {
+    padding: 9px;
+    border: 1px solid #707070;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.int-fd-noBorder {
+    padding: 9px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#date3 {
+    position: relative;
+    /* margin: 6.4px -62px; */
+    z-index: 9999;
+    color: #A7A7A7;
+    left: -25px;
+    top: 8px;
+    font-size: 20px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #707070 !important;
+}
+
+.d-flex-around {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+}
+
+.d-flex-between-ml-0 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.ml-4 {
+    margin-left: 4rem;
+}
+
+.mr-4 {
+    margin-right: 4rem;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.int-fd:hover {
+    border: 1px solid #ff0000;
+}
+
+.justify-content-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.btn-pay {
+    border: 0;
+    background-color: #B9B1E7;
+    padding: 10px 20px;
+    font-weight: bold;
+    -webkit-box-shadow: 0 3px 6px #B9B1E7;
+    box-shadow: 0 3px 6px #B9B1E7;
+    height: 5vh;
+    cursor: pointer;
+}
+
+.btn-pay:hover {
+    background-color: rgba(117, 115, 115, 0.8);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fildtext::-webkit-input-placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+.fildtext:-ms-input-placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+.fildtext::-ms-input-placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+.fildtext::placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+.billing-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 40vh;
+    left: 0vh;
+    top: 0vh;
+    width: 110vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.billing-modal #saveModal {
+    margin-top: 50%;
+}
+
+.saveModal {
+    background: #b1b1b1;
+}
+
+.saveModal-content {
+    background: #b1b1b1;
+    margin: auto 45vw;
+    padding: 1.3vh;
+    border: none;
+    width: 25vw;
+    height: 20vh;
+    border-radius: 5vh;
+}
+
+.saveModal-content .delp {
+    font-size: 2.5vh;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.saveModal-content button {
+    width: 5vw;
+    height: 5.25vh;
+    border-radius: 1vh;
+    border: none;
+    background: white;
+    font-size: 2.5vh;
+}
+
+.saveModal-content #btn1,
+.saveModal-content #btn2 {
+    display: inline-block;
+    margin: 1vh 1vh;
+}
+
+.saveModal-content #btn1 {
+    margin-left: 6.2vw;
+}
+
+.saveModal-content #btn1:hover,
+.saveModal-content #btn2:hover {
+    background: #5c5c5c;
+    color: white;
+}
+
+
+/* calendar */
+
+.datepicker {
+    background-color: unset !important;
+}
+
+.datepickers-container {
+    z-index: 200000 !important;
+    left: -50px !important;
+}
+
+.datepicker--nav {
+    max-height: 30px !important;
+    padding: 4px 0 !important;
+    margin-bottom: 4px !important;
+}
+
+.datepicker--content {
+    background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-title {
+    padding: 6px !important;
+    border: 1px solid #333 !important;
+    background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-action {
+    border: 1px solid #333 !important;
+    background-color: #FFFDC2 !important;
+    width: 60px !important;
+}
+
+.datepicker--content {
+    border: 1px solid #333 !important;
+}
+
+.datepicker--day-name {
+    color: #444242 !important;
+}
+
+
+/* style timepicker */
+
+.wickedpicker__title {
+    display: none !important;
+}
+
+.wickedpicker {
+    height: unset !important;
+    background-color: #FFFDC2 !important;
+    width: 200px !important;
+}
+
+.wickedpicker__controls__control {
+    width: 60px !important;
+}
+
+.pay-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 40vh;
+    left: 0vh;
+    top: 0vh;
+    width: 110vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.pay-modal #payModal {
+    margin-top: 50%;
+}
+
+.payModal {
+    background: #949292;
+}
+
+.payModal-content {
+    background: #a3a2a2;
+    margin: auto 45vw;
+    padding: 3vh;
+    border: none;
+    width: 16vw;
+    margin: auto;
+    margin-left: 50vw;
+    border-radius: 7vh;
+}
+
+.payModal-content div {
+    height: 6vh;
+}
+
+.payModal-content div input {
+    margin-right: 2vw;
+    width: 1vw;
+}
+
+.payModal-content div label {
+    font-weight: lighter;
+    font-size: 1.8vh;
+}
+
+.payModal-content div button {
+    -webkit-transform: translateY(-1vh);
+    transform: translateY(-1vh);
+    width: 7.5vw;
+    height: 5vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    font-size: 2vh;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 35vh;
+    left: 0vh;
+    top: 0vh;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.deletemodal {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.deletemodal-content {
+    background: #b1b1b1;
+    margin: auto 45vw;
+    padding: 1.3vh;
+    border: none;
+    width: 21vw;
+    height: 20vh;
+    border-radius: 6vh;
+}
+
+.deletemodal-content .delp {
+    font-size: 2vh;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.deletemodal-content button {
+    width: 5vw;
+    height: 5.25vh;
+    border-radius: 1vh;
+    border: none;
+    background: white;
+    font-size: 2vh;
+}
+
+.deletemodal-content #btn1,
+.deletemodal-content #btn2 {
+    display: inline-block;
+    margin: 1vh 1vh;
+    outline-style: none;
+}
+
+.deletemodal-content #btn1 {
+    margin-left: 4.5vw;
+}
+
+.deletemodal-content .btn:hover {
+    background: #5c5c5c;
+    color: white;
+}
+
+.btn-sub {
+    border: 0;
+    background-color: #585858;
+    padding: 10px 20px;
+    font-weight: bold;
+    -webkit-box-shadow: 0 3px 6px #585858;
+    box-shadow: 0 3px 6px #585858;
+    border-radius: 20px;
+    color: white;
+}
+
+.rmvarrow {
+    -webkit-appearance: none;
+    line-height: 15px;
+}
+
+@media (min-width: 1500px) {
+    #box-1,
+    #box-2 {
+        height: unset !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    #box-2 {
+        height: 59vh;
+    }
+    #main-content {
+        -webkit-transform: translateY(-1.5vh);
+        transform: translateY(-1.5vh);
+    }
+}
+
+@media (max-width: 1300px) {
+    #box-2 {
+        height: 59vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    #box-1 {
+        height: 59vh;
+    }
+    #box-1 .d-flex {
+        height: 6vh;
+        margin-bottom: 3vh;
+    }
+    .d-flex label {
+        font-size: 2vh;
+    }
+    .m-10 label {
+        font-size: 2vh;
+    }
+}
+
+
+/*# sourceMappingURL=billing-form.css.map */

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/layout_small.css" />
+
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="icon" href="src/img/doctor.ico" />
+    <link rel="stylesheet" href="styles/personal-info.css">
+    <link rel="stylesheet" href="styles/footer-icons.css">
+
+    <!-- <script src="src/js/appointment.js"></script> -->
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Finance Report</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Prescription Report</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts</a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup</a>
+    </div>
+    <div class="main" id="content">
+        <!--Save modal-->
+        <div id="saveModal" class="modal">
+
+
+            <div class="saveModal-content">
+
+                <p class="delp">Want to save the changes made?</p>
+
+                <button class="btn" id="btn1">Yes</button>
+                <button class="btn" id="btn2">No</button>
+            </div>
+
+        </div>
+        <!--Save modal-->
+        <div id="cl-button">
+            <a href="#"><i class="fas fa-times-circle" style="font-size:30px;color:rgb(66, 65, 65);"></i></a>
+        </div>
+        <h1>Personal information</h1>
+        <div class="personal-info-form">
+            <form>
+                <div class="row1">
+                    <label for="patient-id" id="form-label1">Patient ID</label>
+                    <input type="text" id="patient-id">
+
+                    <label for="passport">NRIC/<br>Passport</label>
+                    <input type="text" id="passport">
+
+                    <label for="dob">D.O.B</label>
+                    <input type="text" id="dob">
+
+                    <label for="age">Age</label>
+                    <input type="text" id="age">
+                </div>
+                <div class="row2">
+                    <label for="name" id="form-label1">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="row3">
+                    <label for="address" id="form-label1">Address</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="row4">
+                    <label for="address" id="form-label1"></label>
+                    <input type="text" id="address">
+                </div>
+                <div class="row5">
+                    <label for="gender" id="form-label1">Gender</label>
+
+                    <input type="radio" name="radio" style="background:white;position:relative;bottom:10%;left:0.8%;">
+                    <span class="checkmark-form-gen"></span>
+                    <label for="male" class="male">Male</label>
+
+                    <input type="radio" name="radio" class="gen-radio" style="background:white;position:relative;bottom:8.5%;right:2%;">
+                    <span class="checkmark-form-gen"></span>
+                    <label for="female" class="female">Female</label>
+
+                    <label for="race" id="race"> Race</label>
+                    <select name="race-select" id="race-select">
+                            <option value="c">C</option>
+                        </select>
+
+                    <label for="nation" id="nation">National</label>
+                    <select name="national-select" id="national-select">
+                            <option value="MY">MY</option>
+                        </select>
+
+                    <label for="marry" id="mar-status">Marital Status</label>
+
+                    <input type="radio" name="radio" style="background:white;position:relative;bottom:10%;right:2.5%;">
+                    <span class="checkmark-form-mar"></span>
+                    <label for="single" id="Single">Single</label>
+
+                    <input type="radio" name="radio" style="background:white;position:relative;bottom:10%;right:4%;">
+                    <span class="checkmark-form-mar"></span>
+                    <label for="married" id="Married">Married</label>
+                </div>
+                <div class="row6">
+                    <div class="six-grid">
+                        <div class="one">
+                            <label for="mobile" id="form-label1">Mobile No</label>
+                            <input type="tel" id="mobile">
+                        </div>
+                        <div class="two">
+                            <label for="spouse-name">Spouse<br>Name</label>
+                            <input type="text" id="spouse-name">
+                        </div>
+                        <div class="three">
+                            <label for="e-contact">Emergency<br>Contact<br>Name</label>
+                            <input type="text" id="e-contact">
+                        </div>
+                        <div class="four">
+                            <label for="e-contact-no" id="e-label">Emergency<br>Contact No</label>
+                            <input type="tel" id="e-contact-no">
+
+                            <label for="relation" id="relation-label">Relationship</label>
+                            <select name="relate" id="relation" style="padding-left:4vw;">
+                                    <option value="father">Father</option>
+                                </select>
+                        </div>
+                        <div class="five">
+                            <label for="doctor-id" id="doctor-label">Doctor ID</label>
+                            <select name="doctor-select" id="doctor-id" style="padding-left:4vw;">
+                                    <option value="jaoo1">JA001</option>
+                                </select>
+                        </div>
+                        <div class="six">
+                            <label for="doctor-name" id="doctor-name-label">Doctor</label>
+                            <input type="text" id="doctor-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="image-container">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    <div class="footer-icons3">
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot" style="background: black;"></span>
+        </div>
+
+        <div class="c" style="margin-right:6%;">
+            <a href=" "><img src="src/img/writing.png" alt=""></i>
+            </a>
+        </div>
+
+        <div class="c" style="margin-right:6%;" id="printerbtn">
+            <a><img src="src/img/printer.png" alt="" class="icon-20" />
+            </a>
+        </div>
+        <div class=" c " style="margin-right:3%; " id="dlbtn">
+            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+        </div>
+
+    </div>
+
+
+    <script src="src/js/loggedin.js">
+    </script>
+    <script src="src/js/patient.js">
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>

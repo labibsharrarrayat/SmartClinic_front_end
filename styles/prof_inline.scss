@@ -1,0 +1,535 @@
+#the-title {
+    height: 40px;
+    width: 20%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#FirstName {
+    height: 40px;
+    width: 70%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#lastName {
+    height: 40px;
+    width: 70%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#mobile {
+    height: 40px;
+    width: 35%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#email {
+    height: 40px;
+    width: 55%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#genders {
+    height: 40px;
+    width: 25%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#birthday {
+    height: 40px;
+    width: 35%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#username {
+    height: 40px;
+    width: 65%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#password {
+    height: 40px;
+    width: 45%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+#conpassword {
+    height: 40px;
+    width: 45%;
+    border: 1px solid rgba(128, 128, 128, 0);
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 16px;
+    filter: drop-shadow(0px 2px 2px gray);
+    padding-left: 3%;
+    margin-left: 18px;
+}
+
+.form-label {
+    font-family: Poppins;
+    font-weight: lighter;
+}
+
+
+/* calendar */
+
+.datepicker {
+    background-color: unset !important;
+}
+
+.datepickers-container {
+    z-index: 200000 !important;
+    left: -50px !important;
+}
+
+.datepicker--nav {
+    max-height: 30px !important;
+    padding: 4px 0 !important;
+    margin-bottom: 4px !important;
+}
+
+.datepicker--content {
+    background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-title {
+    padding: 6px !important;
+    border: 1px solid #333 !important;
+    background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-action {
+    border: 1px solid #333 !important;
+    background-color: #FFFDC2 !important;
+    width: 60px !important;
+}
+
+.datepicker--content {
+    border: 1px solid #333 !important;
+}
+
+.datepicker--day-name {
+    color: #444242 !important;
+}
+
+//125% resolution in Chrome
+@media screen and (max-width:1300px) {
+    .my-form>h1 {
+        font-size: 6px;
+        height: 10%;
+    }
+    #the-title {
+        height: 30px;
+        width: 15%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #FirstName {
+        height: 30px;
+        width: 50%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #lastName {
+        height: 30px;
+        width: 50%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #mobile {
+        height: 30px;
+        width: 35%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 20px;
+    }
+    #email {
+        height: 30px;
+        width: 55%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #genders {
+        height: 30px;
+        width: 25%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #birthday {
+        height: 30px;
+        width: 35%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #username {
+        height: 30px;
+        width: 70%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #password {
+        height: 30px;
+        width: 45%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #conpassword {
+        height: 30px;
+        width: 45%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    .form-label {
+        font-family: Poppins;
+        font-weight: lighter;
+        width: 20%;
+        font-size: 1px;
+    }
+}
+
+// 110% resolution in Chrome
+@media screen and (max-width:1400px) {
+    .my-form>h1 {
+        font-size: 2px;
+        line-height: 1%;
+    }
+    #the-title {
+        height: 40px;
+        width: 15%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #FirstName {
+        height: 40px;
+        width: 75%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #lastName {
+        height: 40px;
+        width: 75%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #mobile {
+        height: 40px;
+        width: 35%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #email {
+        height: 40px;
+        width: 55%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #genders {
+        height: 40px;
+        width: 25%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #birthday {
+        height: 40px;
+        width: 35%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #username {
+        height: 40px;
+        width: 70%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #password {
+        height: 40px;
+        width: 45%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    #conpassword {
+        height: 40px;
+        width: 45%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 20px;
+        font-family: Poppins;
+        font-size: 12px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 12px;
+    }
+    .form-label {
+        font-family: Poppins;
+        font-weight: lighter;
+        width: 16%;
+        font-size: 13px;
+    }
+}
+
+//Resolution at 80% on Chrome
+@media only screen and (min-width:1800px) {
+    #the-title {
+        height: 50px;
+        width: 20%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 18px;
+    }
+    #FirstName {
+        height: 50px;
+        width: 75%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 18px;
+    }
+    #lastName {
+        height: 50px;
+        width: 75%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 18px;
+    }
+    #mobile {
+        height: 50px;
+        width: 35%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 18px;
+    }
+    #email {
+        height: 50px;
+        width: 55%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 16px;
+    }
+    #genders {
+        height: 50px;
+        width: 20%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 16px;
+    }
+    #birthday {
+        height: 50px;
+        width: 35%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 16px;
+    }
+    #username {
+        height: 50px;
+        width: 70%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 16px;
+    }
+    #password {
+        height: 50px;
+        width: 50%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 16px;
+    }
+    #conpassword {
+        height: 50px;
+        width: 50%;
+        border: 1px solid rgba(128, 128, 128, 0);
+        border-radius: 30px;
+        font-family: Poppins;
+        font-size: 17px;
+        filter: drop-shadow(0px 2px 2px gray);
+        padding-left: 3%;
+        margin-left: 16px;
+    }
+    .form-label {
+        font-family: Poppins;
+        font-weight: lighter;
+        width: 18%;
+        font-size: 17px;
+        margin-left: 3px;
+    }
+}

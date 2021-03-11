@@ -1,0 +1,78 @@
+@media(max-width:1300px) and (min-width:1091px) {
+    #cl-button {
+        right: 20% !important;
+    }
+}
+
+@media(max-width:1200px) and (min-width:1091px) {
+    #content {
+        width: 77vw !important;
+    }
+    .footer-icons2 {
+        padding-left: 87% !important;
+    }
+}
+
+@media (max-width:1090px) {
+    #cl-button {
+        right: 25% !important;
+    }
+    .footer-icons2 {
+        padding-left: 87% !important;
+    }
+    #dateicon {
+        margin: -1vh -2.5vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    #cl-button {
+        top: 33%;
+    }
+    #inreg-submit {
+        width: 9vw;
+    }
+    .footer-icons2 {
+        padding-left: 80% !important;
+    }
+}
+
+@media (max-width:900px) {
+    .flex-outer li label {
+        max-width: 10vw;
+    }
+}
+
+@media (max-width:800px) {
+    .flex-outer li label {
+        max-width: 11vw;
+    }
+    #inreg-submit {
+        width: 14vw;
+    }
+    .footer-icons2 {
+        padding-left: 84% !important;
+    }
+    #item-code,
+    #stock,
+    #date-invent {
+        width: 50%;
+    }
+    #dateicon {
+        margin: -1vh -2.5vw;
+    }
+}
+
+@media (max-width:700px) {
+    #inreg-submit {
+        width: 15vw;
+    }
+    .footer-icons2 {
+        padding-left: 82% !important;
+    }
+    #item-code,
+    #stock,
+    #date-invent {
+        width: 60%;
+    }
+}

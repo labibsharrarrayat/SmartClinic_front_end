@@ -1,0 +1,310 @@
+.main h1 {
+  text-align: center;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 4.5vh;
+  padding-bottom: 2.7vh;
+}
+
+.main .appoint {
+  width: 60%;
+  height: 63vh;
+  background: rgba(255, 255, 255, 0.37);
+  margin: auto;
+  border-radius: 8vh;
+  padding-top: 2.5vh;
+}
+
+.main .appoint #scan {
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.main .appoint #content {
+  position: relative;
+  height: 40vh;
+  width: 18vw;
+  margin: 15px auto;
+  background: #C9C3E8;
+}
+
+.main .appoint #content:before,
+.main .appoint #content:after,
+.main .appoint #content > :first-child:before,
+.main .appoint #content > :first-child:after {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-color: #515a6d;
+  border-style: solid;
+  content: ' ';
+}
+
+.main .appoint #content:before {
+  top: 0;
+  left: 0;
+  border-width: 8px 0 0 8px;
+}
+
+.main .appoint #content:after {
+  top: 0;
+  right: 0;
+  border-width: 8px 8px 0 0;
+}
+
+.main .appoint #content > :first-child:before {
+  bottom: 0;
+  right: 0;
+  border-width: 0 8px 8px 0;
+}
+
+.main .appoint #content > :first-child:after {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 8px 8px;
+}
+
+.main .appoint .upload {
+  position: relative;
+  background: #b9bdc9;
+  height: 5vh;
+  width: 9vw;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2vh;
+  color: black;
+  font-weight: 550;
+  left: 40%;
+  top: 2vh;
+}
+
+.main .appoint > form {
+  width: 85%;
+  margin: auto;
+}
+
+.flex-outer {
+  list-style: none;
+  padding: 0;
+}
+
+.flex-outer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5vh;
+}
+
+.flex-outer li label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20px;
+          flex: 1 0 20px;
+  max-width: 9vw;
+  font-size: 2vh;
+  font-weight: lighter;
+}
+
+.flex-outer li input {
+  height: 5vh;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3vh;
+  -webkit-filter: drop-shadow(0px 2px 2px gray);
+          filter: drop-shadow(0px 2px 2px gray);
+  padding-left: 1vw;
+  font-size: 2vh;
+}
+
+.flex-outer li select {
+  height: 5vh;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3vh;
+  -webkit-filter: drop-shadow(0px 2px 2px gray);
+          filter: drop-shadow(0px 2px 2px gray);
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 2vh;
+}
+
+.flex-outer > li:first-child {
+  margin-top: 2vh;
+}
+
+#pat-id,
+#date-appoint,
+#time-appoint,
+#doctor-id {
+  width: 30%;
+}
+
+#doctor-name,
+#patient-name {
+  width: 75%;
+}
+
+#inreg-submit {
+  background-color: #707070;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: Poppins;
+  width: 8vw;
+  height: 6vh;
+  border-radius: 20vh;
+  font-size: 2.5vh;
+  cursor: pointer;
+  margin-top: 6%;
+  margin-left: 43%;
+  font-weight: 550;
+}
+
+#inreg-submit:hover {
+  opacity: 0.7;
+}
+
+#cl-button {
+  position: absolute;
+  right: 19vw;
+  margin-top: 0.4vh;
+  color: gray;
+  position: absolute;
+}
+
+#cl-button:hover {
+  opacity: 0.7;
+}
+
+#dateicon {
+  position: absolute;
+  margin: -1vh -1.8vw;
+  color: gray;
+  font-size: 1.9vh;
+}
+
+#time-icon {
+  position: absolute;
+  margin: -1vh -1.8vw;
+  color: gray;
+  font-size: 1.9vh;
+}
+
+.patientFooter {
+  background: none;
+  height: 9vh;
+  width: 165vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  top: 88.5vh;
+  left: 37vh;
+}
+
+.c {
+  width: 3.7vw;
+  height: 7.7vh;
+  background: #b7b0e4;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.c a {
+  cursor: pointer;
+}
+
+.c a i {
+  font-size: 3vh;
+  color: #504f4f;
+}
+
+.c a img {
+  width: 1.6vw;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 40vh;
+  left: 0vh;
+  top: 0vh;
+  width: 110vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.404);
+}
+
+.modal #saveModal {
+  margin-top: 50%;
+}
+
+.saveModal {
+  background: #b1b1b1;
+}
+
+.saveModal-content {
+  background: #b1b1b1;
+  margin: auto 45vw;
+  padding: 1.3vh;
+  border: none;
+  width: 25vw;
+  height: 20vh;
+  border-radius: 5vh;
+}
+
+.saveModal-content .delp {
+  font-size: 2.5vh;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.saveModal-content button {
+  width: 5vw;
+  height: 5.25vh;
+  border-radius: 1vh;
+  border: none;
+  background: white;
+  font-size: 2.5vh;
+}
+
+.saveModal-content #btn1,
+.saveModal-content #btn2 {
+  display: inline-block;
+  margin: 1vh 1vh;
+}
+
+.saveModal-content #btn1 {
+  margin-left: 6.2vw;
+}
+
+.saveModal-content #btn1:hover,
+.saveModal-content #btn2:hover {
+  background: #5c5c5c;
+  color: white;
+}
+/*# sourceMappingURL=barcode.css.map */

@@ -1,65 +1,39 @@
-var num_array = [0, 0, 0, 0]
+var savemodal = document.getElementById("saveModal");
 
-function addArray(n) {
-    var result = parseFloat(n[0]) + parseFloat(n[1]) + parseFloat(n[2]) + parseFloat(n[3]);
-    return "RM " + result.toFixed(2);
+var cancelModal = document.getElementById("cl-button");
+
+var dlbtn = document.getElementById("dlbtn");
+
+
+cancelModal.onclick = function () {
+    savemodal.style.display = "block";
 }
 
-function changedinput1() {
-    var t = document.getElementById("blank1");
-    var t2 = document.getElementById("blank5");
-    if (isNaN(t.value)) {
-        alert("Type Number Only");
-        t.value = "";
-        num_array[0] = t.value;
-    } else {
-        //var value = "RM            " + parseFloat(t.value).toFixed(2);
-        //t.value = value;
-        var value = "RM " + parseFloat(t.value).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-        num_array[0] = t.value;
-        t.value = value;
-        t2.value = addArray(num_array);
+window.onclick = function (event) {
+    if (event.target == savemodal) {
+        savemodal.style.display = "none";
     }
+
 }
 
-function changedinput2() {
-    var t = document.getElementById("blank2");
-    var t2 = document.getElementById("blank5");
-    if (isNaN(t.value)) {
-        alert("Type Number Only");
-        t.value = "";
-    } else {
-        var value = "RM " + parseFloat(t.value).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-        num_array[1] = t.value;
-        t.value = value;
-        t2.value = addArray(num_array);
-    }
+
+var paymodal = document.getElementById("payModal");
+
+var cnlModal = document.getElementById("payNow");
+
+var deleteModal = document.getElementById("deleteModal");
+
+cnlModal.onclick = function () {
+    paymodal.style.display = "block";
 }
 
-function changedinput3() {
-    var t = document.getElementById("blank3");
-    var t2 = document.getElementById("blank5");
-    if (isNaN(t.value)) {
-        alert("Type Number Only");
-        t.value = "";
-    } else {
-        var value = "RM " + parseFloat(t.value).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-        num_array[2] = t.value;
-        t.value = value;
-        t2.value = addArray(num_array);
-    }
+dlbtn.onclick = function () {
+    deleteModal.style.display = "block";
 }
 
-function changedinput4() {
-    var t = document.getElementById("blank4");
-    var t2 = document.getElementById("blank5");
-    if (isNaN(t.value)) {
-        alert("Type Number Only");
-        t.value = "";
-    } else {
-        var value = "RM " + parseFloat(t.value).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
-        num_array[3] = t.value;
-        t.value = value;
-        t2.value = addArray(num_array);
+window.onclick = function (event) {
+    if (event.target == paymodal) {
+        paymodal.style.display = "none";
     }
+
 }

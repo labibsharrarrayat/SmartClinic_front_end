@@ -1,369 +1,372 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clinic Name</title>
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/diagnostic.css">
-    <link rel="stylesheet" href="styles/modals.css">
-
-    <script src="https://kit.fontawesome.com/d814c57d3c.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- for fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
     <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
-    <link href="styles/datepicker.min.css" rel="stylesheet" type="text/css">
-    <script src="src/js/datepicker.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/layout_small.css" />
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/diagnostic.css">
+    <link rel="stylesheet" href="styles/footer-icons.css">
+
+    <link rel="icon" href="src/img/doctor.ico" />
+    <!-- <link rel="stylesheet" href="styles/appointment.css"> -->
+    <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
     <!-- Include English language -->
-    <script src="src/js/i18n/datepicker.en.js"></script>
+    <script src="node_modules/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+
 </head>
 
 <body>
-    <div class="container" id="container">
-        <div class="header">
-            <img class="logo" src="src/img/heading.png" alt="ClinicCareLogo" />
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
 
-            <div class="date-time">
-                <p id="date">May 2, 2020</p>
-                <p id="time">20:05</p>
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
             </div>
+        </h1>
 
-            <div class="search-bar">
-                <div class="dropdown-box">
-                    <input type="text" name="search" autocomplete="off" />
-                    <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg"
-                            alt="" /></a>
 
-                    <div class="searchbar-dropdown">
-                        <input type="radio" id="search-by-id" name="src" />
-                        <label for="search-by-id">Search by ID</label>
-                        <br />
-                        <br />
-                        <input type="radio" id="search-by-name" name="src" />
-                        <label for="search-by-name">Search by Name</label>
-                    </div>
-                </div>
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
             </div>
+            <!--input update finish-->
+        </div>
 
-            <div class="nav-images">
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
                 <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
-
-                <div class="dropdown-notification">
-                    <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
-                    <div class="dropdown-content">
-                        <a href="#">You have missed an appointment</a>
-                        <a href="#">Clear all notification</a>
-                    </div>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
                 </div>
+            </div>
 
-                <div class="dropdown-user">
-                    <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
-                    <div class="dropdown-content2">
-                        <a href="#">My Profile</a>
-                        <a href="#">Logout</a>
-                    </div>
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
                 </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
             </div>
         </div>
-
-        <div class="sidebar" id="sidebar">
-            <div class="toggle-btn" onclick="toggleSidebar()">
-                <a href="" onclick=" return false">
-                    <div id="arrow-left"></div>
-                </a>
-            </div>
-
-            <a href=""><img src="src/img/patient.svg" />Patients</a>
-            <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
-            <a href="" class="nav-active"><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
-            <a href=""><img src="src/img/finance.svg" alt="" />Billing</a>
-            <a href=""><img src="src/img/prescription.svg" alt="" />Expenses</a>
-            <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
-            <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
-            <a href="#clients"><img src="src/img/cash.svg" alt="" />Finance Reports
-            </a>
-            <a href="#contact"><img src="src/img/settings-tools.svg" alt="" />Backup & Table Setup
-            </a>
-        </div>
-
-        <div class="main">
-            <div class="head">
-                <h1 style="text-transform: uppercase;">Diagnostic Report</h1>
-            </div>
-
-            <div style="width: 100%; max-width: 1050px;">
-                <div class="tabl">
-                    <div class="table-nav">
-                        <div class="flex" style="margin-top: 20px;width: 100%;">
-                            <div class="status" id="dpdwn1">
-                                <label for="status">Status</label>
-                                <select name="status" class="status_dpdwn" id="status">
-                                    <option value="Today">Today</option>
-                                    <option value="This week">This week</option>
-                                    <option value="This month">This month</option>
-                                </select>
-                            </div>
-                            <div style="margin-right:10px;display: flex;flex-grow: 1;" id="from-todiv">
-                                <div>
-                                    <label for="from">From</label>
-                                    <span>
-                                        <input type="text" id="tacky" class="datepicker-here" data-language='en'>
-                                        <i class="far fa-calendar-alt"></i> </span>
-                                </div>
-                                <div>
-                                    <label for="to">To</label>
-                                    <span>
-                                        <input type="text" id="tacky" class="datepicker-here ml-inp" data-language='en'>
-                                        <i class="far fa-calendar-alt"></i> </span>
-                                </div>
-                            </div>
-                            <div style="display: flex;" id="big-div-tnav">
-                                <div style="margin-right:10px">
-                                    <label for="sid">Starting Vendor Code</label>
-                                    <select name="sid" id="sid">
-                                        <option value="">Test</option>
-                                    </select>
-                                </div>
-                                <div id="bdt-div">
-                                    <label for="eid">Ending Vendor Code</label>
-                                    <select name="eid" id="esid">
-                                        <option value="">Test</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="table-wrapper-scroll-y" style="overflow-y: hidden;">
-                        <table class="table" style="max-width: 1050px; min-width: 1050px;">
-                            <thead>
-                                <tr>
-                                    <th style="width:70px;border-left: none;">No</th>
-                                    <th style="width:110px">Date <i class="fas fa-sort"></i></th>
-                                    <th style="width:200px">Patient ID <i class="fas fa-sort"></i></th>
-                                    <th style="width:520px">Name <i class="fas fa-sort"></i></th>
-                                    <th style="width: 110px; padding-left: 20px; border-right: none;">Reciept No.</th>
-
-                                </tr>
-                            </thead>
-                            <tbody style="max-height: calc(100vh - 420px);min-height: 200px;"
-                                class="table-wrapper-scroll-y">
-                                <tr>
-                                    <td style="width:70px;border-left: none;">1</td>
-                                    <td style="width:110px">1/3/2020</td>
-                                    <td style="width:200px">Cell</td>
-                                    <td style="width:520px">John Doe</td>
-                                    <td style=" width:110px;border-right:none">Cell</td>
-
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>20/12/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-                                <tr>
-                                    <td style="border-left: none;">1</td>
-                                    <td>1/3/2020</td>
-                                    <td>Cell</td>
-                                    <td>John Doe</td>
-                                    <td style="border-right:none">Cell</td>
-                                </tr>
-
-
-                            </tbody>
-                        </table>
-
-                    </div>
-                    <br>
-                    <div style="max-width: 1040px;">
-                        <div id="total">
-                            <div style="border-right: 1px solid black;padding-right: 18px;">
-                                Total
-                            </div>
-                            <div style="padding-left:20px">
-                                RM <strong style="padding-left:10px">100.00</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer">
-                    <div class="footer-div">
-                        <div class="dots-div">
-                            <span class="dot"></span>
-                            <span class="dot" style="background-color: black;"></span>
-                        </div>
-                        <div class="icons-div">
-                            <div class="icons">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                            <div class="icons" onclick="show('modal13')">
-                                <img src="src/img/printer.png" alt="printer">
-                            </div>
-                            <div class="icons" onclick="show('modal2')">
-                                <img src="src/img/rubbish-bin.png" alt="delete">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href="" style="background:rgba(117, 115, 115, 0.37);"><img src="src/img/diagnostic.svg" alt="" />Diagnostic
+            Report
+        </a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Finance Report</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Prescription Report</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts
+        </a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup
+        </a>
     </div>
+    <div class="main" id="content">
+        <!--printmodal-->
+        <div id="printmodal" class="modal">
 
 
-    <!-- ______________________________________________________________________________________________________________________ -->
-    <!-- delete modal here -->
-    <div id="modal2" class="modal">
-        <div class="modalContent2">
-            <form style="margin-top: 7px;">
-                <div style="text-align: center;margin-top: 25px;">
-                    <p class="label-modal2">Are you sure to delete?</label>
-                    <div class="form-div-modal2">
-                        <button class="modalBtn2" type="submit">Yes</button>
-                        <button class="modalBtn2" type="submit">No</button>
-                    </div>
-                </div>
-            </form>
+            <div class="printmodal-content">
+
+                <p class="printp">Starting Patient ID</p>
+                <p class="printp">Ending Patient ID</p>
+                <select name="" class="prints1">
+                    <option value=""></option>
+
+                </select>
+
+                <select name="" class="prints2">
+                    <option value=""></option>
+
+                </select>
+
+                <button>PRINT</button>
+            </div>
+
         </div>
-    </div>
-    <!-- delete modal till here -->
-    <!-- print modal 9 here  0/1 -->
-    <div id="modal13" class="modal">
-        <div class="modalContent13">
-            <form style="margin-top: 7px;">
-                <div class="form-div-modal13">
-                    <label for="sid" class="label-modal13">Starting Patient ID</label>
-                    <select name="sid" id="sid" class="inp-modal13">
-                        <option value="">JA000906000</option>
-                    </select>
+        <!--printmodal ends-->
+        <!-- delete popup-->
+        <div id="deletemodal" class="modal">
+
+
+            <div class="deletemodal-content">
+
+                <p class="delp">Are you sure to delete?</p>
+
+                <button class="btn" id="btn1">Yes</button>
+                <button class="btn" id="btn2">No</button>
+            </div>
+
+        </div>
+        <!--delete popup ends -->
+
+
+        <div class="tbl">
+            <h1>DIAGNOSTIC REPORT</h1>
+            <div class="patient-search">
+                <p><label for="" id="show-today">Show<br>Today</label></p>
+                <select name="" id="show-today-select">
+                    <option value=""></option>
+                </select>
+                <p id="label-1">From</p>
+                <input type='text' id="input-label-1" class='date col-40 ml-1 datepicker-here' data-language='en' />
+
+                <!-- <input type="text"> -->
+                <a href="#"><i id="dateicon1" class="far fa-calendar-alt x"></i></a>
+                <p id="label-2">To</p>
+                <input type='text' id="input-label-2" class='date col-40 ml-1 datepicker-here' data-language='en' />
+
+                <!-- <input type="text" id="input-label-2"> -->
+                <a href="#"><i id="dateicon2" class="far fa-calendar-alt y"></i></a>
+                <!--The div is for the gap-->
+                <div id="gap">
                 </div>
-                <div class="form-div-modal13">
-                    <label for="eid" class="label-modal13">Ending Patient ID</label>
-                    <select name="eid" id="eid" class="inp-modal13">
-                        <option value="">JA000906000</option>
-                    </select>
+
+
+                <p id="spi">Starting Patient ID</p>
+                <select name="" id="spis">
+                    <option value=""></option>
+
+                </select>
+
+                <p id="epi" style="margin-left:50px;">Ending Patient ID</p>
+                <select name="" id="epis">
+                    <option value=""></option>
+
+                </select>
+
+                <!-- <button>QUEUE</button> -->
+            </div>
+            <div class="tabl">
+                <div class="heading-table">
+                    <table class="table2">
+                        <tr>
+                            <!--<th width="7.18%">No</th>
+                            <th width="20.5%">Patient ID <span class="updown" style="margin-top:7px;"> &#9650;</span>
+                                <span class="updown" style="margin-bottom:2px;">&#9660;</span></th>
+                            <th width="50.7%">Name <span class="updown" style="margin-top:7px;">
+                                    &#9650;</span> <span class="updown" style="margin-bottom:2px;">&#9660;</span></th>
+                            <th style=" border-right:none; ">Gender</th>-->
+                            <th style="width:5.2vw;padding-bottom:0.48%;">No</th>
+                            <th style=" width:9vw; ">Date <span class="updown " style="margin-top:7px; ">
+                                    &#9650;</span>
+                                <span class="updown " style="margin-bottom:2px; ">&#9660;</span></th>
+                            <th style="width:14vw;padding-top:3px; ">Patient ID <span class="updown "
+                                    style="margin-top:7px; ">
+                                    &#9650;</span>
+                                <span class="updown " style="margin-bottom:2px; ">&#9660;</span></th>
+                            <th style="width:32vw; ">Name <span class="updown " style="margin-top:7px; ">
+                                    &#9650;</span> <span class="updown " style="margin-bottom:2px; ">&#9660;</span></th>
+                            <th style=" border-right:none;padding-bottom:0.48%;">Receipt No.</th>
+                        </tr>
+                    </table>
+
                 </div>
-                <div class="form-div-modal13">
-                    <label for="from" class="label-modal13">Starting Date</label>
-                    <span>
-                        <input type="text" id="from" class="inp-modal13"><i class="far fa-calendar-alt"></i>
-                    </span>
+
+                <div class=" table-responsive table-wrapper-scroll-y table-fix ">
+                    <table class=" table ">
+                        <!--<thead>
+                        <tr>
+                            <th scope=" col " width=" 7% " class=" thd " style='position: sticky; top: -1px;'>No</th>
+                            <th scope=" col " width=" 20% " class=" thd " style='position: sticky; top: -1px;'>Patient ID
+                                <span> &#9650;</span> <span>&#9660;</span></th>
+                            <th scope=" col " width=" 50% " class=" thd " style='position: sticky; top: -1px;'>Name <span>
+                                    &#9650;</span> <span>&#9660;</span></th>
+                            <th scope=" col " width=" 20% " class=" thd " style='position: sticky; top: -1px; border-right:none;'>
+                                Gender</th>
+
+                        </tr>
+                    </thead>-->
+
+                        <tbody>
+                            <!--<tr>
+                                <td width=" 7% ">1</td>
+                                <td width=" 19.9% ">Cell</td>
+                                <td width=" 48.8% ">Cell</td>
+                                <td width=" 20% " style=" border-right:none; ">Cell</td>
+
+                            </tr>-->
+                            <tr>
+                                <td id="col-no " style="width:5.2vw; ">1</td>
+                                <td id="col-date " style="width:9vw; ">1/3/2020</td>
+                                <td id="col-id " style="width:14vw; ">Cell</td>
+                                <td id="col-name " style="width:32vw; ">John Doe</td>
+                                <td id="col-receipt " style="border-right:none; ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">Cell</td>
+                                <td id="col-name ">John Doe</td>
+                                <td id="col-receipt ">Cell</td>
+
+                            </tr>
+
+                        </tbody>
+
+
+
+
+
+
+                    </table>
                 </div>
-                <div class="form-div-modal13">
-                    <label for="to" class="label-modal13">Ending Date</label>
-                    <span>
-                        <input type="text" id="to" class="inp-modal13"><i class="far fa-calendar-alt"></i>
-                    </span>
-                </div>
-            </form>
-            <div class="text-center">
-                <button class="modalBtn13" type="submit">PRINT</button>
+
+                <!-- </div> -->
+
+
+
             </div>
         </div>
     </div>
-    <!-- print modal 9 till here 1/1 -->
+    <div class="footer-icons">
+        <div class="c" style="margin-right:6%;">
+            <a href=" "><i class="fas fa-plus "></i></a>
+        </div>
+
+        <div class="c" style="margin-right:6%;" id="printerbtn">
+            <a><img src="src/img/printer.png " alt=" "></a>
+        </div>
+        <div class=" c " style="margin-right:3%; " id="deletebtn">
+            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+        </div>
+
+    </div>
+    <script src=" src/js/loggedin.js ">
+    </script>
+    <script src="src/js/patient.js "></script>
+    <!-- for collapsing sidebar -->
+    <script type="text/javascript ">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+            $('.x').on('click', function () {
+                $("#input-label-1").focus();
+            });
+            $('.y').on('click', function () {
+                $("#input-label-2").focus();
+            });
+        });
+    </script>
 
 </body>
 
 </html>
-
-<script type="text/javascript">
-    function toggleSidebar() {
-        document
-            .getElementById("container")
-            .classList.toggle("container-no-sidebar");
-        document.getElementById("sidebar").classList.toggle("active");
-        document.getElementById("arrow-left").classList.toggle("active");
-    }
-</script>
-<script>
-    function show(x) {
-        document.getElementById(x).style.display = "flex";
-    }
-    window.onclick = function (event) {
-        var ele = document.getElementsByClassName("modal");
-        for (var i = 0; i < ele.length; i++) {
-            if (event.target == ele[i]) {
-                ele[i].style.display = "none";
-            }
-        }
-    }
-
-</script>
-
-<script src="src/js/layout.js"></script>

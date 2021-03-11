@@ -1,0 +1,201 @@
+@import "functions.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-zoom: 75%;
+    max-zoom: 150%;
+}
+
+
+/* Remove every outline */
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+
+@-ms-viewport {
+    width: 480px;
+}
+
+@viewport {
+    zoom: 1;
+    min-zoom: 1;
+    max-zoom: 2;
+}
+
+html {
+    background: url("../src/img/MAIN_BACKGROUND.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    @include felx(flex-end,
+    row);
+    position: absolute;
+    margin: -10px;
+}
+
+nav {
+    div {
+        margin: 0 5px;
+        padding: 23px;
+    }
+}
+
+nav {
+    div:hover {
+        border-color: rgb(160, 160, 160);
+    }
+}
+
+nav {
+    div:hover i {
+        color: #bdbdbd;
+    }
+}
+
+.fb {
+    width: 3%;
+    height: 50%;
+    background: rgba(255, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(80, 79, 79);
+    border-radius: 50%;
+}
+
+.fb {
+    a {
+        i {
+            font-size: 28px;
+            color: rgb(80, 79, 79);
+        }
+    }
+}
+
+.inst {
+    width: 3%;
+    height: 50%;
+    background: rgba(255, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(80, 79, 79);
+    border-radius: 50%;
+}
+
+.inst>a>i {
+    font-size: 28px;
+    color: rgb(80, 79, 79);
+}
+
+.twit {
+    width: 3%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(80, 79, 79);
+    border-radius: 50%;
+}
+
+.twit>a>i {
+    font-size: 28px;
+    color: rgb(80, 79, 79);
+}
+
+header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#headingImage {
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    #headingImage {
+        width: 350px;
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (min-width:1800px) {
+    nav {
+        height: 100px;
+        padding-top: 2px;
+    }
+    .fb {
+        width: 3%;
+        height: 58%;
+        background: rgba(255, 0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid rgb(80, 79, 79);
+        border-radius: 50%;
+    }
+    .fb {
+        a {
+            i {
+                font-size: 35px;
+                color: rgb(80, 79, 79);
+            }
+        }
+    }
+    .inst {
+        width: 3%;
+        height: 58%;
+        background: rgba(255, 0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid rgb(80, 79, 79);
+        border-radius: 50%;
+    }
+    .inst>a>i {
+        font-size: 35px;
+        color: rgb(80, 79, 79);
+    }
+    .twit {
+        width: 3%;
+        height: 58%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid rgb(80, 79, 79);
+        border-radius: 50%;
+    }
+    .twit>a>i {
+        font-size: 35px;
+        color: rgb(80, 79, 79);
+    }
+}

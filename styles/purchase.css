@@ -1,0 +1,754 @@
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#show-today {
+  line-height: 1.9vh;
+  font-size: 1.7vh;
+  font-weight: lighter;
+  position: relative;
+  bottom: 20%;
+}
+
+#show-today-select {
+  margin-right: 1vw;
+  width: 2vh;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 5px 10px rgba(180, 173, 227, 0);
+  box-shadow: 5px 10px rgba(180, 173, 227, 0);
+}
+
+#show-status {
+  line-height: 1.9vh;
+  font-size: 1.7vh;
+  font-weight: lighter;
+  position: relative;
+  bottom: 20%;
+}
+
+#show-status-select {
+  margin-right: 1vw;
+  width: 2vh;
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 5px 10px rgba(180, 173, 227, 0);
+  box-shadow: 5px 10px rgba(180, 173, 227, 0);
+}
+
+#op-all {
+  font-family: Poppins;
+  border-bottom: solid 1px rgba(255, 0, 0, 0);
+}
+
+#dateicon3 {
+  position: relative;
+  color: gray;
+  top: 0px;
+  right: 25px;
+}
+
+#dateicon4 {
+  position: relative;
+  color: gray;
+  top: 0px;
+  right: 25px;
+}
+
+.table-fix {
+  width: 77vw;
+  position: absolute;
+  height: 39vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.heading-table {
+  width: 77vw;
+  height: 40px;
+}
+
+.table2 {
+  width: 77vw;
+  height: 100%;
+}
+
+thead {
+  font-size: 5vh;
+  background: #b1b1b1;
+  text-align: center;
+}
+
+tbody {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.col-amount {
+  border-right: none;
+}
+
+.patient-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  margin-left: 3px;
+  margin: 10px;
+}
+
+.patient-search select {
+  border: none;
+}
+
+.main {
+  position: absolute;
+  width: 80%;
+}
+
+.tabl {
+  position: absolute;
+  width: 98%;
+  margin-top: 6%;
+  text-transform: uppercase;
+}
+
+.tbl {
+  margin-left: 20px;
+}
+
+.tbl h1 {
+  width: 30vw;
+  padding-left: 2vw;
+}
+
+td {
+  border: solid 1px rgba(255, 0, 0, 0);
+  padding: 0mm;
+  font-size: 2vh;
+}
+
+th {
+  position: -webkit-sticky;
+  position: sticky;
+  border-bottom: black;
+  background: #b1b1b1;
+  font-size: 2vh;
+}
+
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+  border-right: solid 1px #3b3d3d;
+  border-bottom: solid 1px rgba(255, 0, 0, 0);
+}
+
+.thd {
+  border-bottom: solid 3px black;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+tr:hover {
+  background: #B4ADE3;
+}
+
+#col-id {
+  padding-right: 3vw;
+}
+
+#col-name {
+  padding-right: 2vw;
+}
+
+.patient-search {
+  position: absolute;
+  margin-top: 10px;
+}
+
+.patient-search button {
+  width: 100px;
+  height: 52px;
+  border-radius: 24px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background: #ff1c59;
+  letter-spacing: 1px;
+  font-size: 15px;
+  position: absolute;
+  left: 1060px;
+  top: 1%;
+}
+
+.patient-search #spi {
+  position: relative;
+  width: 15vw;
+  margin-left: 0%;
+  right: -12vw;
+}
+
+#spis {
+  position: relative;
+  right: -18vh;
+  margin-left: 0%;
+  margin-top: 26px;
+  width: 9vw;
+  -webkit-filter: drop-shadow(0px 1px 1px gray);
+  filter: drop-shadow(0px 1px 1px gray);
+}
+
+.patient-search #epi {
+  position: relative;
+  width: 15vw;
+  margin-left: 0%;
+  right: -10vw;
+}
+
+#epis {
+  position: relative;
+  margin-left: 0%;
+  margin-top: 26px;
+  width: 9vw;
+  right: -13vh;
+  -webkit-filter: drop-shadow(0px 1px 1px gray);
+  filter: drop-shadow(0px 1px 1px gray);
+}
+
+.patient-search p {
+  font-weight: 500;
+}
+
+.patient-search p {
+  margin-top: 29px;
+}
+
+/*.patient-search #epis {
+        position: relative;
+        right: 15vh;
+        margin-top: 26px;
+        -webkit-filter: drop-shadow(0px 1px 1px gray);
+        filter: drop-shadow(0px 1px 1px gray);
+    }*/
+.patient-search input {
+  width: 125px;
+  height: 28px;
+  border-radius: 50px;
+  margin-top: 25px;
+  border: solid 1px rgba(0, 0, 0, 0);
+  -webkit-filter: drop-shadow(0px 1px 1px gray);
+  filter: drop-shadow(0px 1px 1px gray);
+}
+
+.patient-search #label-1 {
+  position: relative;
+  width: 2vw;
+  margin-left: 1%;
+}
+
+.patient-search #label-2 {
+  position: relative;
+  width: 1vw;
+  margin-left: 1%;
+}
+
+.patient-search #input-label-1 {
+  margin-left: 1.5%;
+}
+
+.patient-search #input-label-2 {
+  margin-left: 1%;
+}
+
+#dateicon1 {
+  position: relative;
+  color: gray;
+  top: 28px;
+  right: 25px;
+}
+
+#dateicon2 {
+  position: relative;
+  color: gray;
+  right: 26px;
+  top: 28px;
+}
+
+.slc {
+  width: 125px;
+  height: 28px;
+  border-radius: 50px;
+  margin-top: 22px;
+}
+
+.tbl h1 {
+  margin-left: 35% !important;
+  font-size: 4.5vh;
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 40vh;
+  left: 0vh;
+  top: 0vh;
+  width: 110vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.404);
+}
+
+.deletemodal {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.deletemodal-content {
+  background: #b1b1b1;
+  margin: auto 45vw;
+  padding: 1.8vh;
+  border: none;
+  width: 24vw;
+  height: 22vh;
+  border-radius: 6vh;
+  margin-left: 10vw;
+}
+
+.deletemodal-content .delp {
+  font-size: 2.5vh;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.deletemodal-content button {
+  width: 5vw;
+  height: 5.25vh;
+  border-radius: 1vh;
+  border: none;
+  background: white;
+  font-size: 2vh;
+}
+
+.deletemodal-content #btn1,
+.deletemodal-content #btn2 {
+  display: inline-block;
+  margin: 1vh 1vh;
+  outline-style: none;
+}
+
+.deletemodal-content #btn1 {
+  margin-left: 5.3vw;
+}
+
+.deletemodal-content .btn:hover {
+  background: #5c5c5c;
+  color: white;
+}
+
+.printmodal-content {
+  background: #b1b1b1;
+  margin: auto;
+  padding: 3vh;
+  border: none;
+  width: 23.5vw;
+  /* height: 26vh; */
+  border-radius: 7vh;
+  margin-left: 45vw;
+}
+
+.printmodal-content .printp {
+  margin-top: 2.5vh;
+  line-height: 4vh;
+  font-size: 2.5vh;
+  font-weight: 500;
+}
+
+.printmodal-content .prints1 {
+  position: relative;
+  left: 12vw;
+  top: -12.5vh;
+  height: 5vh;
+  width: 8vw;
+  border-radius: 0;
+}
+
+.printmodal-content .prints2 {
+  position: relative;
+  left: 3.76vw;
+  top: -5.7vh;
+  height: 5vh;
+  width: 8vw;
+  border-radius: 0;
+}
+
+.printmodal-content button {
+  /* position: absolute; */
+  width: 6vw;
+  height: 4.5vh;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: #555050;
+  font-size: 2vh;
+  font-weight: 600;
+  /* margin-top: 2vh;
+      left: 105vh; */
+}
+
+.printmodal-content button:hover {
+  opacity: 0.7;
+}
+
+.footer-icons {
+  top: 86vh;
+}
+
+.table-wrapper-scroll-y::-webkit-scrollbar {
+  background: rgba(255, 255, 255, 0.6);
+  width: 12px;
+}
+
+.table-wrapper-scroll-y::-webkit-scrollbar-thumb {
+  background: #c9c8c8;
+  border-radius: 10px;
+  width: 12px;
+  height: 100px;
+}
+
+.table-wrapper-scroll-y::-webkit-scrollbar-track {
+  background: rgba(0, 128, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.updown {
+  float: right;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+  clear: right;
+  font-size: 13px;
+  line-height: 3px;
+  margin-right: 10px;
+}
+
+/* .active, */
+.btn:hover {
+  background-color: rgba(145, 145, 145, 0.5);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 35vh;
+  left: 0vh;
+  top: 0vh;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.appmModal-content {
+  background: #B3B4C0;
+  margin: auto;
+  margin-top: -10vh;
+  margin-right: 31.2vw;
+  padding: 4vh;
+  border: none;
+  width: 24vw;
+  border-radius: 8vh;
+  /* height: 59vh; */
+  padding-top: 5vh;
+}
+
+.appmModal-content form {
+  margin: auto;
+}
+
+.appmModal-content .modal-outer {
+  list-style: none;
+  padding: 0;
+}
+
+.appmModal-content .modal-outer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 3vh;
+  height: 6vh;
+  width: 20vw;
+}
+
+.appmModal-content .modal-outer li label {
+  -webkit-box-flex: 1;
+  font-size: 1.9vh;
+  font-weight: lighter;
+  width: 45%;
+}
+
+.appmModal-content .modal-outer li input {
+  /* height: 5vh; */
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding-left: 1vw;
+  font-size: 1.9vh;
+  width: 45%;
+  padding: 5px;
+}
+
+.appmModal-content .modal-outer li select {
+  /* height: 5vh; */
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding-left: 1vw;
+  font-size: 1.9vh;
+  width: 45%;
+  padding: 5px;
+}
+
+.appmModal-content .btn {
+  width: 6vw;
+  /* height: 4.5vh; */
+  border-radius: 50px;
+  border: none;
+  color: white;
+  background: #555050;
+  font-size: 1.9vh;
+  font-weight: 600;
+  /* margin-left: 7.5vw;
+      margin-top: 1.9vh; */
+  text-align: center;
+  /* line-height: 30px; */
+}
+
+.appmModal-content .btn:hover {
+  opacity: 0.7;
+}
+
+.deletemodal {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.deletemodal-content {
+  background: #b1b1b1;
+  margin: auto 45vw;
+  padding: 1.3vh;
+  border: none;
+  width: 21vw;
+  height: 20vh;
+  border-radius: 6vh;
+}
+
+.deletemodal-content .delp {
+  font-size: 2vh;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.deletemodal-content button {
+  width: 5vw;
+  height: 5.25vh;
+  border-radius: 1vh;
+  border: none;
+  background: white;
+  font-size: 2vh;
+}
+
+.deletemodal-content #btn1,
+.deletemodal-content #btn2 {
+  display: inline-block;
+  margin: 1vh 1vh;
+  outline-style: none;
+}
+
+.deletemodal-content #btn1 {
+  margin-left: 4.5vw;
+}
+
+.deletemodal-content .btn:hover {
+  background: #5c5c5c;
+  color: white;
+}
+
+.printmodal-content #dateicon {
+  right: 34.2vw !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .colwidth1 {
+    width: 7.3%;
+  }
+  .colwidth2 {
+    width: 20.9%;
+  }
+  .colwidth3 {
+    width: 51.4%;
+  }
+  .colwidth4 {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .tbl > h1 {
+    font-size: 1.8vw;
+  }
+  .table-fix {
+    width: 98%;
+    position: absolute;
+    height: 330px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .patient-search {
+    top: 7vh;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .table-fix {
+    width: 77vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .tbl > h1 {
+    font-size: 1.8vw;
+  }
+  .table-fix {
+    width: 77vw;
+    height: 280px;
+  }
+  .patient-search {
+    top: 7vh;
+  }
+}
+
+.datepicker {
+  background-color: unset !important;
+}
+
+.datepickers-container {
+  z-index: 200000 !important;
+  left: -50px !important;
+}
+
+.datepicker--nav {
+  max-height: 30px !important;
+  padding: 4px 0 !important;
+  margin-bottom: 4px !important;
+}
+
+.datepicker--content {
+  background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-title {
+  padding: 6px !important;
+  border: 1px solid #333 !important;
+  background-color: #FFFDC2 !important;
+}
+
+.datepicker--nav-action {
+  border: 1px solid #333 !important;
+  background-color: #FFFDC2 !important;
+  width: 60px !important;
+}
+
+.datepicker--content {
+  border: 1px solid #333 !important;
+}
+
+.datepicker--day-name {
+  color: #444242 !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .col-20 {
+    width: 4.5vw;
+  }
+}
+
+.calculate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.5vh;
+  width: 13vw;
+  background-color: #B4ADE3;
+  font-weight: 700;
+  color: black;
+  position: absolute;
+  top: 40%;
+  left: 77%;
+  border-radius: 20px;
+  margin-top: 1vh;
+}
+
+.total {
+  width: 5vw;
+  height: 4.5vh;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.border {
+  border-right: solid 1px black;
+  height: 4.5vh;
+}
+
+.rm {
+  width: 3vw;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.amount {
+  width: 5vw;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.col-20 {
+  width: 30%;
+  margin-bottom: -10px;
+  margin-left: 2px;
+}
+
+select.day {
+  border: 0;
+  background-color: unset;
+  margin-left: -3px;
+}
+
+select.status {
+  border: 0;
+  background-color: unset;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+/*# sourceMappingURL=purchase.css.map */

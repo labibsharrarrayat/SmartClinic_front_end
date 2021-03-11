@@ -1,0 +1,50 @@
+@media(max-width:1400px) {
+    .table-fix {
+        height: 300px;
+    }
+}
+
+@media(max-width:1350px) {
+    .patient-search {
+        margin-top: 0px !important;
+    }
+    .tabl {
+        width: 50vw !important;
+    }
+    .table-fix {
+        height: 250px;
+    }
+}
+
+@media (max-width:1200px) and (min-width:1090px) {
+    .wrapper {
+        width: 104vw;
+    }
+}
+
+@media (max-width:1090px) {
+    .tabl {
+        margin-top: 0 !important;
+        width: 60vw !important;
+    }
+    .table2 {
+        width: 94vw !important;
+    }
+    .table-fix {
+        width: 94vw !important;
+    }
+    .patient-search {
+        position: relative !important;
+        margin: 0 !important;
+        top: 0vh !important;
+    }
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:730px) {
+    .tabl {
+        width: 50vw !important;
+    }
+}

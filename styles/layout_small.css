@@ -1,0 +1,292 @@
+/*******************************************************************************************************
+********************************************************************************************************
+********************************************************************************************************/
+
+
+/* changes here for responsiveness */
+
+.btn-info {
+    background-color: #716E6D;
+    border-color: #716E6D;
+}
+
+#sbar {
+    transition: all 0.3s;
+}
+
+#sbar.active {
+    margin-left: -19%;
+}
+
+#content.active {
+    width: 100%;
+    margin-left: 0;
+}
+
+#content {
+    width: calc(100% - 19%);
+    transition: all 0.3s;
+}
+
+.wrapper {
+    width: 100vw;
+    margin-right: 1em;
+    display: flex;
+    min-width: 0 !important;
+}
+
+#timezonetext {
+    text-align: center;
+    float: left;
+}
+
+@media (min-width:1091px) {
+    #sidebarCollapse {
+        display: none;
+    }
+}
+
+
+/* media queries for main content icons */
+
+@media (max-width:1300px) {
+    #cl-button {
+        right: 9% !important;
+    }
+}
+
+@media (max-width:1000px) {
+    #cl-button {
+        top:20%;
+        right: 11% !important;
+    }
+}
+
+@media(max-width:1400px) {
+    #birth {
+        position: relative !important;
+    }
+}
+
+
+/* media queries for nav bar */
+
+@media (max-width:1400px) and (min-width:1300px) {
+    #searchbar {
+        width: 19%;
+        height: 84%;
+    }
+    .iconresize {
+        width: 30% !important;
+    }
+    #box3 {
+        height: 58% !important;
+    }
+}
+
+@media (max-width:1400px) and (min-width:1192px) {
+    #logoimg {
+        width: 24%;
+        height: 11%;
+        left: 15%
+    }
+}
+
+@media (max-width:1192px) and (min-width:940px) {
+    #logoimg {
+        width: 25%;
+        height: 11%;
+        left: 15%;
+    }
+}
+
+@media (max-width:1300px) and (min-width:820px) {
+    #timezonetext {
+        font-size: medium !important;
+        text-align: center;
+        float: right;
+    }
+}
+
+@media (max-width:1300px) and (min-width:1096px) {
+    #box3 {
+        margin-right: 12px;
+        width: 15vw;
+        height: 6vh;
+    }
+    .iconresize {
+        width: 31% !important;
+    }
+    #searchbar {
+        width: 20%;
+        height: 84%;
+    }
+}
+
+@media (max-width:1096px) and (min-width:900px) {
+    #box3 {
+        margin-right: 12px;
+        width: 17vw;
+        height: 5vh;
+    }
+    #searchbar {
+        width: 18%;
+        height: 84%;
+    }
+    #logoimg {
+        width: 35%;
+        height: 11%;
+        left: 18%;
+    }
+}
+
+@media (max-width:900px) and (min-width:500px) {
+    #timezonetext {
+        font-size: small !important;
+        text-align: center;
+        float: right;
+    }
+    #box3 {
+        margin-right: 12px;
+        width: 22vw;
+        height: 5vh;
+    }
+    #searchbar {
+        width: 17%;
+        height: 84%;
+    }
+    #logoimg {
+        width: 33%;
+        height: 11%;
+        left: 19%;
+    }
+}
+
+@media (max-width:700px) and (min-width:600px) {
+    #logoimg {
+        width: 33%;
+        height: 9%;
+        left: 17%;
+    }
+}
+
+@media (max-width:600px) and (min-width:500px) {
+    #logoimg {
+        width: 30%;
+        height: 8%;
+        left: 16%;
+    }
+}
+
+@media (max-width:500px) {
+    .wrapper {
+        width: 100%;
+        overflow-x: auto !important;
+    }
+    #page {
+        overflow-x: auto !important;
+    }
+    #logoimg {
+        width: 24% !important;
+        height: 7% !important;
+    }
+    #box3 {
+        margin-right: 12px !important;
+        width: 220px !important;
+        height: 50px !important;
+    }
+    #searchbar {
+        width: 300px !important;
+    }
+    nav {
+        height: 20vh !important;
+    }
+}
+
+
+/* sidebar media query */
+
+@media (max-width: 1200px) and (min-width: 1090px) {
+    #sbar {
+        width: 250px;
+    }
+    #content {
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #sbar {
+        margin-left: -250px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    #sbar.active {
+        margin-left: 0;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
+    #content.active {
+        width: 100%;
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+
+/*media queries for form */
+@media (max-width:700px){
+    .formgrid{
+        display: grid !important;
+        grid-template-columns: 22% 82%;
+    }
+    .cname{
+        width: 100% !important;
+    }
+    .my-form{
+        height: 100% !important;
+    }
+    .field{
+        margin-left:20px !important;
+    }
+    .fild-company{
+        margin-left: 20px !important;
+        width: 100% !important;
+    }
+}
+
+
+
+
+@media (max-width:500px) {
+    .prof-content {
+        grid-template-columns: repeat(auto-fill, 450px) !important;
+        max-height: 65vh !important;
+        overflow: scroll;
+    }
+    #birth {
+        position: relative !important;
+    }
+    #profiletext {
+        margin-bottom: 10px;
+    }
+    .my-form {
+        height: 100% !important;
+        padding: 10px !important;
+    }
+    .form_1 {
+        padding: 10px !important;
+    }
+    #inreg {
+        margin-left: 40% !important;
+    }
+    #cl-button {
+        left: 80% !important;
+        font-size: 10px !important;
+    }
+}

@@ -1,0 +1,40 @@
+@media(max-width:1300px) {
+    #cl-button {
+        right: 15vw !important;
+    }
+}
+
+@media(max-width:1200px) and (min-width:1091px) {
+    .main .invent-bound {
+        width: 78%;
+        margin-left: 50px;
+    }
+}
+
+@media(max-width:1090px) {
+    #cl-button {
+        right: 18vw !important;
+    }
+    .main .invent-bound {
+        width: 83%;
+        margin-left: 4vw;
+    }
+    #dateicon {
+        margin: -1vh -2.8vw;
+    }
+    .fixeye {
+        width: 2.1vw;
+    }
+    #inreg-submit {
+        width: 11vw;
+    }
+}
+
+@media (max-width:1000px) {
+    #cl-button {
+        top: 27%;
+    }
+    .fixeye {
+        width: 2.4vw;
+    }
+}

@@ -1,0 +1,99 @@
+@media (min-width: 1400px) {
+  #start_date {
+    height: 4.3vh;
+  }
+  #end_date {
+    height: 4.3vh;
+  }
+}
+
+@media (max-width: 1400px) {
+  .col-35 {
+    margin-right: 10px;
+    min-width: 100px;
+  }
+  .label-to {
+    margin-left: -0.1vw;
+  }
+  #date2 {
+    -webkit-transform: translateY(0.3vh);
+            transform: translateY(0.3vh);
+  }
+}
+
+@media (max-width: 1450px) and (min-width: 1300px) {
+  #end_date {
+    width: 39%;
+    font-size: 1.5vh;
+  }
+  .label-to {
+    margin-left: 0.5vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .label-to {
+    margin-left: -0.1vw;
+  }
+  #start_date {
+    font-size: 1.7vh;
+    height: 4.3vh;
+  }
+  #end_date {
+    width: 41%;
+    font-size: 1.7vh;
+    height: 4.3vh;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1091px) {
+  #content {
+    max-width: 77vw;
+  }
+  .info-date {
+    width: 34%;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  .show-hours {
+    min-width: 16vw;
+  }
+  .status-completed {
+    min-width: 100px;
+  }
+  .status-awaiting {
+    min-width: 86px;
+  }
+  .info-date {
+    width: 37%;
+    margin-left: 1rem;
+  }
+  .main h1 {
+    margin-left: 7vw;
+  }
+  .label-from {
+    margin-left: 3vw;
+    margin-right: 0vw;
+  }
+  #start_date {
+    width: 14vw;
+  }
+  .label-to {
+    margin-left: 2vw;
+  }
+  #end_date {
+    width: 14vw;
+  }
+  .custom-select {
+    width: 6vw;
+  }
+}
+
+@media (max-width: 1090px) {
+  .text-gray-light {
+    font-size: 1.7vh;
+  }
+}
+/*# sourceMappingURL=appointment_small.css.map */

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/layout_small.css" />
+
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/diagnostic-report_small.css">
+    <link rel="stylesheet" href="styles/diagnostic-report.css">
+    <link rel="icon" href="src/img/doctor.ico" />
+
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href="" style="background:rgba(117, 115, 115, 0.37);-webkit-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.1);">
+            <img src="src/img/diagnostic.svg" alt="" />Diagnostic Report
+        </a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Finance Report</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Prescription Report</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts
+        </a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup
+        </a>
+    </div>
+    <div class="main" id="content">
+        <div class="d-flex-between">
+            <div class="code-box">R004</div>
+            <h1>DIAGNOSTIC REPORT</h1>
+            <div id="cl-button" class="cancel-btn">
+                <a href="#"><i class="fas fa-times-circle" style="font-size:30px;color:rgb(66, 65, 65);"></i></a>
+            </div>
+        </div>
+        <div class="d-flex-between" id="main-scroll">
+            <div class="d-grid part">
+                <div class="d-flex" style="margin-top:2.3%;">
+                    <label class="w-25 ml-1 mt-5px lb" for="patient" style="width: 39%;">Patient ID</label>
+                    <select class="w-35 ml-1 slc" style="margin-left: 2.7vh;width: 15.4vw;height:4.3vh;" id="fixpid">
+                        <option value="1"></option>
+                    </select>
+                    <span class="w-32 ml-1 mt-5px" id="fixJane">Jane</span>
+                    <span class="c ml-1 fixeye" style="width: 3.5vw;height: 3.5vh;background-color: #B38FDC; border-radius:50%;">
+                        <a href=" " style="margin-top:3px;"><i class="fas fa-eye" id="eye"></i></a>
+                    </span>
+                </div>
+
+
+
+                <div class="d-flex mt-5px" style="margin-top:1%;margin-bottom:5vh;">
+                    <label class="w-25 ml-1 mt-5px lb" for="patient" id="did">Doctor ID</label>
+                    <input type="text" class="w-35 ml-1 slc" id="docinp" style="margin-left: -1vh; width: 8.5vw;height:4.2vh;">
+                    <span class="w-32 ml-1 mt-5px">Dr.Jane Doe</span>
+                </div>
+                <div class="d-grid box" id="mn_small">
+                    <div class="box-title w-40 mt-5px">
+                        MEDICAL NOTES
+                    </div>
+                    <div class="dia-info part1">
+                        <span class="td-title">Body Mass Index</span>
+                        <span class="mt-5px">
+                            <label for="Weight" class="lb w-25 ">Weight</label>
+                            <input name="Weight" class="w-20 field" type="text" placeholder="kg" />
+                        </span>
+                        <span class="mt-5px">
+                            <label for="Height" class="lb w-25">Height</label>
+                            <input name="Height" class="w-20 field" type="text" placeholder="cm" />
+                        </span>
+                        <span class="my-10">
+                            BMI : Normal
+                        </span>
+                    </div>
+                    <div class="dia-info my-10 part2">
+                        <span class="td-title mb10">Symptoms</span>
+
+                        <!--<br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>-->
+
+                        <div class="text-left ml-1">select symptoms</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid part box">
+                <div class="box-title w-40 mt-5px">
+                    DIAGNOSIS
+                </div>
+                <div class="dia-info mt-5px part3">
+                    <span class="td-title">Findings</span>
+
+                    <div class="text-left ml-1">text input</div>
+                    <!--<br>
+                    <br>
+                    <br>-->
+
+
+                </div>
+                <div class="dia-info my-10 part4">
+                    <span class="td-title">Advise / Consultation</span>
+
+                    <div class="text-left ml-1">text input</div>
+                    <!--<br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>-->
+                </div>
+                <div class="dia-info mt-5px">
+                    <span class="td-title">Diagnosis</span>
+
+                    <div class="text-left ml-1" style="height: 8px;">text input</div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+
+            </div>
+            <div class="d-grid part box">
+                <div class="box-title w-40 mt-5px">
+                    TREATMENT
+                </div>
+                <div class="dia-info mt-5px part5">
+                    <span class="td-title mb10">Allergy</span>
+                    <!--<br>
+                    <br>-->
+
+                    <div class="text-left ml-1">text input</div>
+                    <!--<br>
+                    <br>
+                    <br>-->
+
+
+                </div>
+                <div class="dia-info my-10 part6">
+                    <span class="td-title">Advise / Consultation</span>
+
+                    <div class="text-left ml-1">text input</div>
+                    <!--<br>
+                    <br>
+                    <br>-->
+                </div>
+                <div class="dia-info mt-5px part7">
+                    <span class="td-title">Treatment</span>
+
+                    <div class="text-left ml-1">text input</div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+
+            </div>
+        </div>
+        <footer>
+            <div class="patientFooter mt-3">
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot" style="background: black;"></span>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    <script src=" src/js/loggedin.js">
+    </script>
+    <script src="src/js/patient.js"></script>
+    <!-- for collapsing sidebar -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+.main #cl-button {
+    float: right;
+    margin-right: 0vw;
+    margin-top: -18px;
+}
+.no{
+    width:6.2vw;
+}
+.dateX{
+    width:12vw;
+}
+.vendorCode{
+    width:16vw;
+}
+.vendorName{
+    width:18vw;
+}
+.PO{
+    width: 10.8vw
+}
+/* .amt{
+    width: 8.8vw;
+} */
+
+
+/*
+.x{
+    width:6.2vw;
+}
+.y{
+    width:12vw;
+}
+.z{
+    width:16vw;
+}
+.w{
+    width:18vw;
+}
+.u{
+    width: 10.8vw;
+}*/
+/* .v{
+    width: 8.8vw
+} */
+@media (max-height:680px){
+    .table-fix{
+        height: 35vh;
+    }
+}
+@media(max-width:1300px){
+    .no{
+        width:6.2vw;
+    }
+    .dateX{
+        width:12vw;
+    }
+    .vendorCode{
+        width:18vw;
+    }
+    .vendorName{
+        width:22vw;
+    }
+    .PO{
+        width: 12.8vw
+    }
+
+    .x{
+        width:6.2vw;
+    }
+    .y{
+        width:12vw;
+    }
+    .z{
+        width:18vw;
+    }
+    .w{
+        width:22vw;
+    }
+    .u{
+        width: 12.8vw;
+    }
+}
+@media(max-width:1500px){
+    
+
+    /*bodyfixes*/
+    #content{
+        width: 70vw;
+    }
+     /*table fixes*/
+    .tabl{
+        margin-top: 100px;
+        width: 75vw;
+    }
+    .table-fix{
+        width: 74vw;
+    }
+    .table2{
+        width: 74vw;
+    }
+    .heading-table{
+        width: 75vw;
+    }
+
+    /*patient serach*/
+    .patient-search{
+        width: 50vw;
+    }
+
+    /*top menu*/
+    .patient-search #label-1{
+        width: 3vw;
+        min-width: 3vw;
+    }
+    .patient-search #label-2{
+        width: 2vw;
+        min-width: 2vw;
+    }
+
+    .patient-search #spi {
+        right: -3vw;
+        min-width: 15vw;
+    }
+    #spis{
+        right: -5vh;
+        min-width: 6vw;
+    }
+    #epis{
+        min-width: 6vw;
+        right: -6vh;
+    }
+    .patient-search #epi {
+        right: -5vw;
+        min-width: 15vw;
+    }
+    .patient-search input{
+        width: 90px;
+    }
+
+    .toplink2{
+        width: 1vw;
+    }
+    .toplink{
+        width: 2vw;
+    }
+}
+
+@media(max-width:1200px){
+    /*bodyfixes*/
+    #content{
+        width: 70vw;
+    }
+    /*table fixes*/
+    .tabl{
+        margin-top: 100px;
+        width: 70vw;
+    }
+    .table-fix{
+        width: 70vw;
+    }
+    .table2{
+        width: 70vw;
+    }
+    .heading-table{
+        width: 70vw;
+    }
+}
+@media (max-width:1090px){
+    /*close btn*/
+    .main #cl-button {
+        margin-right: -24vw;
+    }
+    /*table fixes*/
+    .tabl{
+        margin-top: 100px;
+        width: 90vw;
+    }
+    .table-fix{
+        width: 90vw;
+    }
+    .table2{
+        width: 90vw;
+    }
+
+    /*patient serach*/
+    .patient-search{
+        width: 81vw;
+    }
+
+    /*top menu*/
+    .patient-search #label-1{
+        width: 5vw;
+        min-width: 5vw;
+    }
+    .patient-search #label-2{
+        width: 2vw;
+        min-width: 2vw;
+    }
+    .toplink2{
+        width: 0vw;
+    }
+    .toplink{
+        width: 2vw;
+    }
+
+    .patient-search #spi {
+        min-width: 17vw;
+        right: -6vw;
+    }
+    #spis{
+        right: -10vh;
+    }
+    #epis {
+        min-width: 6vw;
+        right: -11vh;
+    }
+    .patient-search #epi {
+        min-width: 16.12vw;
+        right: -8vw;
+    }
+    .patient-search input{
+        width: 90px;
+    }
+
+
+    /*top heading*/
+    .tbl > h1 {
+        font-size: 2.3vw;
+        margin-left: 55% !important;
+    }
+   
+}
+@media (max-width:886px){
+     /*table fixes*/
+    .tabl{
+        margin-top: 120px;
+    }
+    #spis{
+        width: 25vw;
+        right: -6vh;
+    }
+    #epis{
+        width: 25vw;
+        right: -9vh;
+    }
+    .patient-search input{
+        width: 80px;
+    }
+
+    
+    /*top heading*/
+    .tbl > h1 {
+        font-size: 2.8vw;
+    }
+}

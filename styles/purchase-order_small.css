@@ -1,0 +1,99 @@
+body{
+    overflow: hidden;
+  }
+  .main #cl-button{
+      margin-right: 24px;
+      margin-top: 19px;
+  }
+  .LISTING-box{
+      overflow: hidden !important;
+      height: 100%;
+  }
+  #list-content{
+      height: 62vh !important;
+      overflow-y: auto !important;
+  }
+  #list-content::-webkit-scrollbar {
+    width: 10px;
+  }
+    
+  #list-content::-webkit-scrollbar-thumb {
+    background: #9F9C9C;
+    border-radius: 20px;
+  }
+    
+  #list-content::-webkit-scrollbar-track {
+    background: unset;
+  }
+  .mt-1 h1{
+    width: 31vw;
+  }
+  .plusIcon{
+    width: 42px;
+    height: 42px;
+    padding-top: 15px;
+    padding-right: 15px;
+  }
+  .orderIcon{
+    margin-top: -5vh;
+  }
+  
+  @media(max-width:1400px) and (min-width:1090px){
+    .orderlb{
+      width: 25%;
+    }
+   
+  }
+  @media(max-width:1200px) and (min-width:1090px){
+    #content{
+      width:77vw;
+    }
+    .orderlb{
+      width: 30%;
+    }
+    .w-75{
+      width:65%;
+    }
+   
+  }
+  
+  
+  @media(max-width:1090px){
+    .orderIcon{
+      margin-top: -5vh;
+    }
+    .orderlb{
+      width: 25%;
+    }
+    .plusIcon{
+      width: 42px;
+      height: 42px;
+      padding-top: 15px;
+      padding-right: 15px;
+    }
+    .mt-1 h1 {
+        width: 36vw;
+    }
+    .code-No{
+        width: 9vw;
+      }
+  }
+  @media(max-width:900px){
+    .orderlb{
+      width: 33%;
+    }
+    .w-75{
+      width:65%;
+    }
+    .mt-1 h1{
+      font-size: 3.8vh;
+    }
+    .code-No{
+      width: 10vw;
+    }
+  }
+  @media(max-width:800px){
+    .mt-1 h1{
+      width: 39vw;
+    }
+  }

@@ -1,110 +1,359 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clinic Name</title>
-  <link rel="stylesheet" href="styles/layout.css" />
-  <link rel="stylesheet" href="styles/financial-report.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/layout_small.css" />
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/financial-report.css">
+    <link rel="icon" href="src/img/doctor.ico" />
+    <!--<link rel="stylesheet" href="styles/medical-hist.css">-->
+    <!-- <link rel="stylesheet" href="styles/appointment.css"> -->
+    <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Include English language -->
+    <script src="node_modules/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+
+
 </head>
 
 <body>
-  <div class="container" id="container">
-    <div class="header">
-      <img class="logo" src="src/img/heading.png" alt="ClinicCareLogo" />
-
-      <div class="date-time">
-        <p id="date">May 2, 2020</p>
-        <p id="time">20:05</p>
-      </div>
-
-      <div class="search-bar">
-        <div class="dropdown-box">
-          <input type="text" name="search" autocomplete="off" />
-          <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
-
-          <div class="searchbar-dropdown">
-            <input type="radio" id="search-by-id" name="src" />
-            <label for="search-by-id">Search by ID</label>
-            <br />
-            <br />
-            <input type="radio" id="search-by-name" name="src" />
-            <label for="search-by-name">Search by Name</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-images">
-        <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
-
-        <div class="dropdown-notification">
-          <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
-          <div class="dropdown-content">
-            <a href="#">You have missed an appointment</a>
-            <a href="#">Clear all notification</a>
-          </div>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
         </div>
 
-        <div class="dropdown-user">
-          <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
-          <div class="dropdown-content2">
-            <a href="#">My Profile</a>
-            <a href="#">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
 
-    <div class="sidebar" id="sidebar">
-      <div class="toggle-btn" onclick="toggleSidebar()">
-        <a href="" onclick=" return false">
-          <div id="arrow-left"></div>
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:2%;" />
+            <div class="dropdown-content3" style="width:1000px; margin-right:1px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+                <input type="radio" name="src">
+                <p>Search by NRIC/Passport</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report
         </a>
-      </div>
+        <a href=""><img src="src/img/finance.svg" alt="" />Billing</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Expenses</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients" class="nav-active"><img src="src/img/cash.svg" alt="" />Financial Reports
+        </a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup
+        </a>
+    </div>
+    <div class="main" id="content">
+        <div class="d-flex justify-content-center">
+            <h1 class="title-body">FINANCIAL REPORTS</h1>
+        </div>
+        <div class="d-flex mt-1 justify-content-around">
+            <div class="col-3 item-btn" id="sale">SALES</div>
+            <div class="col-3 item-btn" id="expenses">EXPENSES</div>
+            <div class="col-3 item-btn" id="inventory">INVENTORY</div>
+            <div class="col-3 item-btn" id="loss">PROFIT & LOSS</div>
+        </div>
 
-      <a href="#home" class="nav-active"><img src="src/img/patient.svg" />Patients</a>
-      <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
-      <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
-      <a href=""><img src="src/img/finance.svg" alt="" />Billing</a>
-      <a href=""><img src="src/img/prescription.svg" alt="" />Expenses</a>
-      <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
-      <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
-      <a href="#clients"><img src="src/img/cash.svg" alt="" />Finance Reports
-      </a>
-      <a href="#contact"><img src="src/img/settings-tools.svg" alt="" />Backup & Table Setup
-      </a>
+        <div class="d-flex mt-1 justify-content-center">
+            <!--sales-->
+            <div id="sales" class="modal">
+
+
+                <div class="sales-content">
+                    <form>
+                        <ul class="modal-outer">
+                            <li>
+                                <label class="col-4 text-left first" for="month">Month</label>
+                                <select id="month">
+                                    <option value="1" selected>January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left first" for="year">Year</label>
+                                <select id="year">
+                                    <option value="2020">2020</option>
+                                </select>
+                            </li>
+
+
+                        </ul>
+                        <div class="d-flex justify-content-center">
+                            <input type="radio" name="twoChoose">
+                            <label for="month" class="mr-1">Monthly</label>
+                            <input type="radio" name="twoChoose">
+                            <label for="quarterly" class="mr-1">Quarterly</label>
+                        </div>
+
+                    </form>
+                    <button>PRINT</button>
+
+                </div>
+
+            </div>
+
+            <!-- Expenses -->
+            <div id="expensesModal" class="modal">
+
+
+                <div class="sales-content">
+                    <form>
+                        <ul class="modal-outer">
+                            <li>
+                                <label class="col-4 text-left" for="startAcc">Starting Account</label>
+                                <select id="startAcc" name="startAcc">
+                                    <option value=""></option>
+                                
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left" for="endingAcc">Ending Account</label>
+                                <select id="endingAcc" name="endingAcc">
+                                    <option value=""></option>
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left" for="month">Month</label>
+                                <select id="month">
+                                    <option value="1" selected>January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left" for="year">Year</label>
+                                <select id="year">
+                                    <option value="2020">2020</option>
+                                </select>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="d-flex justify-content-center">
+                            <input type="radio" name="twoChoose">
+                            <label for="month" class="mr-1">Monthly</label>
+                            <input type="radio" name="twoChoose">
+                            <label for="quarterly" class="mr-1">Quarterly</label>
+
+                        </div>
+
+                    </form>
+                    <button>PRINT</button>
+
+                </div>
+
+            </div>
+            <!-- inventory -->
+            <div id="inventoryModal" class="modal">
+
+
+                <div class="sales-content">
+                    <form>
+                        <ul class="modal-outer">
+                            <li>
+                                <label class="col-4 text-left" for="startAcc">Starting Item</label>
+                                <select id="month" name="startAcc">
+                                    <option value=""></option>
+                                  
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left" for="endingAcc">Ending Item</label>
+                                <select id="year" name="endingAcc">
+                                    <option value=""></option>
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left" for="month">Month</label>
+                                <select id="month">
+                                    <option value="1" selected>January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left" for="year">Year</label>
+                                <select id="year">
+                                    <option value="2020">2020</option>
+                                </select>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="d-flex justify-content-center">
+                            <input type="radio" name="twoChoose">
+                            <label for="month" class="mr-1">Monthly</label>
+                            <input type="radio" name="twoChoose">
+                            <label for="quarterly" class="mr-1">Quarterly</label>
+
+                        </div>
+
+                    </form>
+                    <button>PRINT</button>
+
+                </div>
+
+            </div>
+            <!-- loss -->
+            <div id="lossModal" class="modal">
+
+
+                <div class="sales-content">
+                    <form>
+                        <ul class="modal-outer">
+                            <li>
+                                <label class="col-4 text-left first" for="month">Month</label>
+                                <select id="month">
+                                    <option value="1" selected>January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </li>
+                            <li>
+                                <label class="col-4 text-left first" for="year">Year</label>
+                                <select id="year">
+                                    <option value="2020">2020</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-center">
+                            <input type="radio" name="twoChoose">
+                            <label for="month" class="mr-1">Monthly</label>
+                            <input type="radio" name="twoChoose">
+                            <label for="quarterly" class="mr-1">Quarterly</label>
+                            <input type="radio" name="twoChoose">
+                            <label for="yearly" class="mr-1">Yearly</label>
+
+                        </div>
+
+                    </form>
+                    <button>PRINT</button>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
-    <div class="main">
-        <div class="head-div">
-            <h1>Financial Report</h1>
-        </div>
-        <div class="main-body">
-            <div>
-                <button class="div-btn">Sales</button>
-            </div>
-            <div>
-                <button class="div-btn">Expense</button>
-            </div>
-            <div>
-                <button class="div-btn">Inventory</button>
-            </div>
-            <div>
-                <button class="div-btn">Profit and Loss</button>
-            </div>
-        </div>
-    </div>
-  </div>
-  <script type="text/javascript" src="src/js/layout.js"></script>
-  <script type="text/javascript">
-    function toggleSidebar() {
-      document
-        .getElementById("container")
-        .classList.toggle("container-no-sidebar");
-      document.getElementById("sidebar").classList.toggle("active");
-      document.getElementById("arrow-left").classList.toggle("active");
-    }
-  </script>
+    <script src=" src/js/loggedin.js ">
+    </script>
+
+
+    <script src=" src/js/financial-report.js ">
+    </script>
+
+    <!-- for collapsing sidebar -->
+    <script type="text/javascript ">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
 </body>
 
 </html>

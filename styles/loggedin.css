@@ -1,0 +1,20 @@
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+.main {
+  margin-left: 300px;
+  /* Same as the width of the sidenav */
+  padding: 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=loggedin.css.map */

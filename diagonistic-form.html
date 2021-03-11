@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="styles/loggedin.css" /> -->
+    <!-- <link rel="stylesheet" href="styles/animations.css" /> -->
+    <link rel="stylesheet" href="styles/layout_small.css" />
+    <!--<link rel="stylesheet" href="styles/medical-hist.css" />-->
+
+    <link rel="stylesheet" href="styles/layout.css">
+    <!-- <link rel="stylesheet" href="styles/my_profile.css" /> -->
+    <link rel="stylesheet" href="styles/diagonistic-form_small.css">
+    <link rel="stylesheet" href="styles/diagonistic-form.css">
+    <link rel="stylesheet" href="styles/footer-icons.css">
+    <!-- <link rel="stylesheet" href="styles/new_prof.css"> -->
+    <link rel="icon" href="src/img/doctor.ico" />
+
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Finance Report</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Prescription Report</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts
+        </a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup
+        </a>
+    </div>
+    <div class="main" id="content">
+        <div class="d-flex-between">
+            <div class="code-box">R004</div>
+            <h1>DIAGNOSTIC REPORT</h1>
+            <div id="cl-button" class="cancel-btn">
+                <a href="#"><i class="fas fa-times-circle" style="font-size:30px;color:rgb(66, 65, 65);"></i></a>
+            </div>
+        </div>
+        <div class="d-flex-between" id="f-main">
+            <div class="d-grid part">
+                <div class="d-flex utext" style="margin-top:3vw;">
+                    <label class="w-25 ml-1 mt-5px lb" for="patient">Patient ID</label>
+                    <select class="w-40 ml-1 slc">
+                        <option value="1"></option>
+                    </select>
+                    <div class="d-flex w-32 ml-1 mt-5px">
+                        <span class="font-15">Jane</span>
+                        <!--<span class="c ml-1" style="width: 2.4vw;height: 4.7vh;background-color: #B38FDC;">
+                            <a href=" " style="background-color: rgb(170, 170, 170);"><i class="fas fa-eye"
+                                    style="font-size:2.5vh"></i></a>
+                        </span>-->
+                        <span class="c ml-1 fixeye" style="width: 1.8vw;height: 3.5vh;padding-bottom:2px;background-color: #B38FDC; ">
+                            <a href=" " style="margin-top:3px;"><i class="fas fa-eye" style="font-size:1.8vh"></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="d-flex utext mt-5px" style="margin-top: 10px;">
+                    <label class="w-25 ml-1 mt-5px lb" for="patient">Doctor ID</label>
+                    <input type="text" class="w-40 ml-1 slc">
+                    <span class="w-32 ml-1 mt-5px">Dr.Jane Doe</span>
+                </div>
+                <div class="d-grid box" id="pres-box">
+                    <div class="box-title w-40 mt-5px insidetext ctext">
+                        PRESCRIPTION
+                    </div>
+
+                    <div class="dia-info" id="pres-content" style="text-align: left;">
+                        <span class="td-title">Drug</span>
+                        <label for="attach" class="lb w-25" style="margin: 5px; margin-right:12px;">selectDrug</label>
+
+                        <span class="slc" style="background-color: white;display: inline-block;max-width:10vw;max-height: 5vh;border-radius: 50px;margin-left:1vh;">
+                            <input name="attach" class="field inp-icon" id="drug-icon" type="text" placeholder="xxxx"
+                                style="max-height:80%;width: 67%;border-radius: 50px;text-align:center;padding: 0;margin-left:1vh;" />
+                            <i class="fas fa-times-circle" style="text-align: right;"></i>
+                        </span>
+                        <span class="mt-5px insidetext" style="padding: 10px;">
+                            <label for="Weight" class="lb w-32" >Dosage</label>
+                            <input name="Weight" class="w-20 field slc c1_field" type="text" style=" width:29%;height:100%;padding: 15px;" />
+                        </span>
+                        <span class="mt-5px insidetext" style="padding: 10px;">
+                            <label for="Frequency" class="lb w-32" style="transform: translateY(-1vh);">Frequency</label>
+                            <select name="Frequency" class="w-40 slc c1_select" style="width:58%;padding: 15px; height:100%;">
+                                <option value="1"></option>
+                            </select>
+                        </span>
+                        <span class="mt-5px insidetext" style="padding: 10px; ">
+                            <label for="Days" class="lb w-32" >No. of Days</label>
+                            <input name="Days" class="w-20 field slc c1_field" type="text" style=" width:29%;height:100%;padding: 15px;" />
+                        </span>
+                        <span class="mt-5px insidetext" style="padding: 10px; ">
+                            <label for="Instruction" class="lb w-32" style="transform: translateY(-1vh);">Instruction</label>
+                            <select name="Instruction" class="w-40 slc c1_select" style="width:58%;padding: 15px;padding-bottom: 0px;">
+                                <option value="1"></option>
+                            </select>
+                        </span>
+                        <div class="c cicon" style="margin-left:18vw;margin-bottom:10px;width: 4.7vh;height: 4.7vh;background-color: rgb(170, 170, 170);">
+                            <a href=" " style="background-color: rgb(170, 170, 170);"><i class="fas fa-plus"
+                                    style="font-size:2.5vh"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-grid part box list" id="listing-box">
+                <div class="box-title w-40 mt-5px">
+                    LISTING
+                </div>
+                <div class="dia-info mt-5px" id="listing-content" style="margin-top: 1vw;">
+                    <i class="fas fa-times-circle lisiting-icon"></i>
+                    <div class="text-left ml-1">Paracetamol</div>
+                    <div class="text-left ml-1">500mg </div>
+                    <div class="text-left ml-1">3 times a day</div>
+                    <div class="text-left ml-1">When necessary</div>
+                    <div class="text-left ml-1">After Meal</div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="d-grid part box" id="attach-box" style="max-height:64vh">
+                <div class="box-title w-40 mt-5px ctext">
+                    ATTACHMENTS
+                </div>
+                <div class="dia-info mt-5px" style="max-height: 57vh;">
+                    <span class="td-title">Image / Documents</span>
+                    <span style="text-align:left">
+                        <span class="slc"
+                            style="background-color: white;display: inline-block;max-width:10vw;max-height: 5vh;margin-top:10px; border-radius: 50px;">
+                            <input name="attach" class="field inp-icon" type="text" placeholder="xxxx"
+                                style="max-height:80%;width: 80%;border-radius: 50px;text-align:center;padding: 0;" />
+                            <i class="fas fa-times-circle" style="text-align: right;"></i>
+                        </span>
+                    <span class="slc " style="background-color: white;display: inline-block;max-width:10vw;max-height: 5vh;margin-top:10px; border-radius: 50px;">
+                            <input name="attach" class="field  inp-icon" type="text" placeholder="xxxx"
+                                style="max-height:80%;width: 80%;border-radius: 50px;text-align:center;padding: 0;" />
+                            <i class="fas fa-times-circle" style="text-align: right;"></i>
+                        </span>
+                    </span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <!-- <div class="text-left ml-1" style="min-height:28vh"></div>
+                    <br>
+                    <br>
+                    <br>  -->
+
+                    <div id="plus-icon-attach">
+                        <div class="c cicon" style="margin-top: 7px;padding-top:3px;margin-bottom:7px;margin-left:18vw;width: 4.7vh;height: 4.7vh;background-color: rgb(170, 170, 170);">
+                            <a href=" " style="background-color: rgb(170, 170, 170);"><i class="fas fa-plus"
+                                    style="font-size:2.5vh"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<footer class="mt-5px">
+            <div class="patientFooter">
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot" style="background: black;"></span>
+                </div>
+
+                <div class="c ficons" style="margin-right:1%;">
+                    <a href=" "><img src="src/img/printer.png" alt=""></i>
+                    </a>
+                </div>
+                <div class="c ficons" style="margin-right:1%;">
+                    <a href=" "><img src="src/img/rubbish-bin.png" alt=""></i>
+                    </a>
+                </div>
+            </div>
+        </footer>-->
+    </div>
+    <div class="footer-icons3">
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot" style="background: black;"></span>
+        </div>
+
+        <div class="c" style="margin-right:6%;" id="printerbtn">
+            <a><img src="src/img/printer.png" alt="" class="icon-20" />
+            </a>
+        </div>
+        <div class=" c " style="margin-right:3%; " id="delbtn">
+            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+        </div>
+
+    </div>
+    <script src=" src/js/loggedin.js">
+    </script>
+    <script src="src/js/patient.js"></script>
+    <!-- for collapsing sidebar -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

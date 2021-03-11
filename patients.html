@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- <link rel="stylesheet" href="styles/loggedin.css" /> -->
+    <!-- <link rel="stylesheet" href="styles/animations.css" /> -->
+    <link rel="stylesheet" href="styles/layout_small.css" />
+    <link rel="stylesheet" href="styles/layout.css">
+    <!-- <link rel="stylesheet" href="styles/my_profile.css" /> -->
+    <link rel="stylesheet" href="styles/patient.css">
+    <link rel="stylesheet" href="styles/patient_small.css">
+    <link rel="stylesheet" href="styles/footer-icons.css">
+    <!-- <link rel="stylesheet" href="styles/new_prof.css"> -->
+    <link rel="icon" href="src/img/doctor.ico" />
+
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home" class="nav-active"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Finance Report</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Prescription Report</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts
+        </a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup
+        </a>
+    </div>
+    <div class="main" id="content">
+        <!--printmodal-->
+        <div id="printmodal" class="modal">
+
+
+            <div class="printmodal-content">
+
+                <p class="printp">Starting Patient ID</p>
+                <p class="printp">Ending Patient ID</p>
+                <select name="" class="prints1">
+                    <option value=""></option>
+
+                </select>
+
+                <select name="" class="prints2">
+                    <option value=""></option>
+
+                </select>
+
+                <button>PRINT</button>
+            </div>
+
+        </div>
+        <!--printmodal ends-->
+ <!-- delete popup-->
+ <div id="deletemodal" class="modal">
+
+
+    <div class="deletemodal-content">
+
+        <p class="delp">Are you sure to delete?</p>
+
+        <button class="btn" id="btn1">Yes</button>
+        <button class="btn" id="btn2">No</button>
+    </div>
+
+</div>
+<!--delete popup ends -->
+
+
+
+
+        <div class="tbl">
+            <h1>PATIENTS</h1>
+            <div class="patient-search">
+
+                <p>Starting Patient ID</p>
+                <select name="" id="">
+                    <option value=""></option>
+
+                </select>
+
+                <p style="margin-left:10px;">Ending Patient ID</p>
+                <select name="" id="">
+                    <option value=""></option>
+
+                </select>
+
+                <!-- <button>QUEUE</button> -->
+            </div>
+            <div class="tabl">
+                <div class="heading-table">
+                    <table class="table2">
+                        <tr>
+                            <!--<th width="7.18%">No</th>
+                            <th width="20.5%">Patient ID <span class="updown" style="margin-top:7px;"> &#9650;</span>
+                                <span class="updown" style="margin-bottom:2px;">&#9660;</span></th>
+                            <th width="50.7%">Name <span class="updown" style="margin-top:7px;">
+                                    &#9650;</span> <span class="updown" style="margin-bottom:2px;">&#9660;</span></th>
+                            <th style=" border-right:none; ">Gender</th>-->
+                            <th style="width:5.55vw;">No</th>
+                            <th style="width: 12vw;">Patient ID <span class="updown" style="margin-top:5px;"> &#9650;</span>
+                                <span class="updown" style="margin-bottom:7px;">&#9660;</span></th>
+                            <th style="width:45vw;">Name <span class="updown" style="margin-top:5px;">
+                                    &#9650;</span> <span class="updown" style="margin-bottom:7px;">&#9660;</span></th>
+                            <th style=" border-right:none; ">Gender</th>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class=" table-responsive table-wrapper-scroll-y table-fix ">
+                    <table class=" table ">
+                        <!--<thead>
+                        <tr>
+                            <th scope=" col " width=" 7% " class=" thd " style='position: sticky; top: -1px;'>No</th>
+                            <th scope=" col " width=" 20% " class=" thd " style='position: sticky; top: -1px;'>Patient ID
+                                <span> &#9650;</span> <span>&#9660;</span></th>
+                            <th scope=" col " width=" 50% " class=" thd " style='position: sticky; top: -1px;'>Name <span>
+                                    &#9650;</span> <span>&#9660;</span></th>
+                            <th scope=" col " width=" 20% " class=" thd " style='position: sticky; top: -1px; border-right:none;'>
+                                Gender</th>
+
+                        </tr>
+                    </thead>-->
+
+                        <tbody>
+                            <!--<tr>
+                                <td width=" 7% ">1</td>
+                                <td width=" 19.9% ">Cell</td>
+                                <td width=" 48.8% ">Cell</td>
+                                <td width=" 20% " style=" border-right:none; ">Cell</td>
+
+                            </tr>-->
+                            <tr>
+                                <td id="col-no" style="width:5.55vw;">1</td>
+                                <td id="col-id" style="width:12vw;">Cell</td>
+                                <td id="col-name" style="width:45vw;">John Doe</td>
+                                <td id="col-gender" style="border-right:none;">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no">2</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no">3</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">4</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">5</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">6</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">7</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">8</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">9</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">10</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+                            <tr>
+                                <td id="col-no">11</td>
+                                <td id="col-id">Cell</td>
+                                <td id="col-name">John Doe</td>
+                                <td id="col-gender">Cell</td>
+                            </tr>
+
+                        </tbody>
+
+
+
+
+
+
+                    </table>
+                </div>
+
+
+                <!-- </div> -->
+
+                <!--<footer>
+
+                    <div class="patientFooter">
+                        <div class="c" style="margin-right:4.5%;">
+                            <a href=" "><i class="fas fa-plus"></i></a>
+                        </div>
+
+
+                        <div class=" c " style="margin-right:3.6%;" id="printerbtn">
+                            <a><img src="src/img/printer.png" alt=""></a>
+                        </div>
+                        <div class=" c " style="margin-right:12%;" id="deletebtn">
+                            <a><img src="src/img/rubbish-bin.png" alt=""></a>
+                        </div>
+                    </div>
+
+                </footer>-->
+
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-icons">
+        <div class="c" style="margin-right:6%;">
+            <a href=" "><img class="icon-20" src="src/img/save-file.png" alt="" />
+            </a>
+        </div>
+
+        <div class="c" style="margin-right:6%;" id="printerbtn">
+            <a><img src="src/img/printer.png" alt="" class="icon-20" />
+            </a>
+        </div>
+        <div class=" c " style="margin-right:3%; " id="dlbtn">
+            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+        </div>
+
+    </div>
+
+    <script src=" src/js/loggedin.js">
+    </script>
+    <script src="src/js/patient.js"></script>
+    <!-- for collapsing sidebar -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

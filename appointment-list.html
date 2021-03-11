@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/layout_small.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="icon" href="src/img/doctor.ico" />
+    <link rel="stylesheet" href="styles/appointment-list.css">
+    <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Include English language -->
+    <script src="node_modules/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+
+    <!-- <script src="src/js/appointment.js"></script> -->
+
+    <!-- <script src="src/js/appointment.js"></script> -->
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href="" class="nav-active"><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Finance Report</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Prescription Report</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts</a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup</a>
+    </div>
+    <div class="main" id="content">
+        <h1>APPOINTMENTS</h1>
+        <div id="cl-button">
+            <a href="#"><i class="fas fa-times-circle" style="font-size:30px;color:rgb(66, 65, 65);"></i></a>
+        </div>
+
+        <div class="status">
+            <div class="d-grid">
+                <div class="d-flex">
+                    <span class="col-20 text-gray-light">Show</span>
+                    <span class="col-20 text-gray-light">Status</span>
+                    <label class="col-10 " for="from">From</label>
+                    <input type='text' id="start_date" class='date col-40 ml-1 start_date datepicker-here' data-language='en' />
+                    <a href="#"><i id="date1" class="far fa-calendar-alt x"></i></a>
+                </div>
+            </div>
+            <div class="d-flex">
+                <select class="col-20 day" name="Show" id="Show">
+                    <option value="today">Today</option>
+                    <option value="thisweek">This Week</option>
+                    <option value="thismonth">This Month</option>
+                </select>
+                <select class="col-20 day" name="All" id="All">
+                    <option value="All">All</option>
+                    <option value="Awaiting">Awaiting</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+                <label class="col-10  " for="to">To</label>
+                <!-- <input type="text" class="date col-40 ml-1 mt-5px end_date" id="end_date"> -->
+                <input type='text' id="end_date" class='date col-40 ml-1 mt-5px  end_date datepicker-here' data-language='en' />
+                <a href="#"><i id="date2" class="far fa-calendar-alt y"></i></a>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="src/img/calendar-interface-symbol-tool.png" alt="">
+            <img src="src/img/clock.png" alt="">
+            <img src="src/img/stethoscope-medical-tool.png" alt="">
+            <img src="src/img/status-bar.png" alt="">
+
+        </div>
+
+        <div class="scrollDiv">
+            <div class="content">
+                <div class="leftContent">
+                        <a href=" " style="margin-top:1px;"><i class="fas fa-eye" id="eye"></i></a>
+                    <span id="ID">J123456789H</span>
+                    <span id="name">JANE DOE</span>
+                </div>
+
+                <div class="rightContent">
+                    <span id="date">
+                        <span id="date1">02/12/19</span>
+                    <span id="dayName">Tuesday</span>
+                    </span>
+                    <span id="time">9 am - 10 am</span>
+                    <span id="docName">Dr. Jane Doe</span>
+                    <select id="status">
+                        <option value="Awaiting">Awaiting</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="content2">
+                <div class="leftContent">
+                    <a href=" " style="margin-top:1px;"><i class="fas fa-eye" id="eye"></i></a>
+                    <span id="ID">J123456788H</span>
+                    <span id="name">JANE DOE</span>
+                </div>
+
+                <div class="rightContent">
+                    <span id="date">
+                        <span id="date1">02/12/19</span>
+                    <span id="dayName">Thursday</span>
+                    </span>
+                    <span id="time">9 am - 10 am</span>
+                    <span id="docName">Dr. Jane Doe</span>
+                    <select class="deco" id="status">
+                        <option value="Awaiting">Awaiting</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <script src="src/js/loggedin.js">
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+            $('.y').on('click', function() {
+                $("#end_date").focus();
+            });
+            $('.x').on('click', function() {
+                $("#start_date").focus();
+            });
+        });
+    </script>
+</body>
+
+</html>

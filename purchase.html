@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/layout_small.css" />
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/purchase-order.css">
+    <link rel="stylesheet" href="styles/purchase.css">
+    <link rel="stylesheet" href="styles/purchase_small.css">
+
+    <link rel="stylesheet" href="styles/footer-icons.css">
+    <link rel="icon" href="src/img/doctor.ico" />
+    <!-- <link rel="stylesheet" href="styles/appointment.css"> -->
+    <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Include English language -->
+    <script src="node_modules/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:2%;" />
+            <div class="dropdown-content3" style="width:1000px; margin-right:1px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+                <input type="radio" name="src">
+                <p>Search by NRIC/Passport</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href="" style="background:rgba(117, 115, 115, 0.37);"><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report
+        </a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Billing</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Expenses</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts
+        </a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup
+        </a>
+    </div>
+    <div class="main" id="content">
+
+        <div id="dlModal" class="modal">
+
+
+            <div class="deletemodal-content">
+
+                <p class="delp">Are you sure to delete?</p>
+
+                <button class="btn" id="btn1">Yes</button>
+                <button class="btn" id="btn2">No</button>
+            </div>
+
+        </div>
+        <div id="printModal" class="modal">
+
+            <div class="printmodal-content">
+
+                <form>
+                    <ul class="modal-outer" id="dateSection">
+                       
+                        <li>
+                            <label for="starting-date">Starting Date</label>
+                            <input type="text" id="starting-date"  class='datepicker-here' data-language='en'>
+                            <a href="#"><i id="dateicon" class="far fa-calendar-alt x"></i></a>
+                        </li>
+                        <li>
+                            <label for="ending-date">Ending Date</label>
+                            <input type="text" id="ending-date" class='datepicker-here' data-language='en'>
+                            <a href="#"><i id="dateicon" class="far fa-calendar-alt y"></i></a>
+                        </li>
+
+                         
+                     
+                    </ul>
+                    <ul class="modal-outer" id="vendorSection">
+                        <li>
+                            <label for="starting-Vendor" >Starting Vendor Code</label>
+                            <select id="starting-Vendor" class="modal-vendor-slc">
+                                <option value=""></option>
+                            </select>
+                           
+                        </li>
+                        <li>
+                            <label for="ending-Vendor">Ending Vendor Code</label>
+                            <select  id="ending-Vendor" class="modal-vendor-slc">
+                                <option value=""></option>
+                            </select>
+                          
+                        </li>
+                      
+                    </ul>
+                   <div class="text-center">
+                    <input type="radio" id="dateSlc" name="select" checked>
+                    <label for="date">Date</label>
+                    <input type="radio" id="vendorSlc" name="select">
+                    <label for="vendor">Vendor</label>
+                   </div>
+
+                </form>
+                <button>PRINT</button>
+            </div>
+        </div>
+
+        <div class="tbl">
+            <h1>PURCHASE ORDER</h1>
+            <div id="cl-button" class="cancel-btn">
+                <a href="#"><i class="fas fa-times-circle" style="font-size:30px;color:rgb(66, 65, 65);"></i></a>
+            </div>
+            <div class="patient-search">
+                <!-- <p id="spi">Starting Account</p>
+                <select name="" id="spis" class="slc">
+                    <option value=""></option>
+
+                </select>
+
+                <p id="epi">Ending Account</p>
+                <select name="" id="epis" class="slc">
+                    <option value=""></option>
+
+                </select> -->
+
+
+                <p id="label-1">From</p>
+                <input type='text' id="input-label-1" class='date col-40 ml-1 datepicker-here' data-language='en' />
+
+                <!-- <input type="text"> -->
+                <a href="#" class="toplink"><i id="dateicon1" class="far fa-calendar-alt x"></i></a>
+                <p id="label-2">To</p>
+                <input type='text' id="input-label-2" class='date col-40 ml-1 datepicker-here' data-language='en' />
+
+                <!-- <input type="text" id="input-label-2"> -->
+                <a href="#"  class="toplink2"><i id="dateicon2" class="far fa-calendar-alt y"></i></a>
+
+                <p id="spi">Starting Vendor Code</p>
+                <select name="" id="spis" class="slc">
+                    <option value=""></option>
+                </select>
+
+                <p id="epi">Ending Vendor Code</p>
+                <select name="" id="epis" class="slc">
+                    <option value=""></option>
+                </select>
+
+                <!-- <button>QUEUE</button> -->
+            </div>
+            <div class="tabl">
+                <div class="heading-table">
+                    <table class="table2">
+                        <tr>
+
+                            <th style="padding-bottom:0.48%;" class="no">No</th>
+                            <th class="dateX">Date <span class="updown " style="margin-top:7px; ">
+                                    &#9650;</span>
+                                <span class="updown" style="margin-bottom:2px; ">&#9660;</span></th>
+                            <th style="padding-top:3px; " class="vendorCode">Vendor Code<span class="updown " style="margin-top:7px; ">
+                                    &#9650;</span>
+                                <span class="updown " style="margin-bottom:2px; ">&#9660;</span></th>
+                            <th class="vendorName">Vendor Name <span class="updown " style="margin-top:7px; ">
+                                    &#9650;</span> <span class="updown " style="margin-bottom:2px; ">&#9660;</span></th>
+                            <th style="padding-bottom:0.48%;"  class="PO">PO. no<span class="updown " style="margin-top:7px; ">
+                                &#9650;</span> <span class="updown " style="margin-bottom:2px; ">&#9660;</span></th>
+                            <th style="padding-bottom:0.48%;border-right:none;"  class="amt">Amount (RM)<span class="updown " style="margin-top:7px; ">
+                                &#9650;</span> <span class="updown " style="margin-bottom:2px; ">&#9660;</span></th>
+
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class=" table-responsive table-wrapper-scroll-y table-fix ">
+                    <table class=" table ">
+
+
+                        <tbody>
+
+                            <tr>
+                                <td id="col-no " class="x" >1</td>
+                                <td id="col-date "  class="y" >1/3/2020</td>
+                                <td id="col-id "  class="z" >1000</td>
+                                <td id="col-name "  class="w">ABC SDN BHD</td>
+                                <td id="col-receipt "  class="u">1010</td>
+                                <td class="col-amount"  class="v">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+                            <tr>
+                                <td id="col-no ">1</td>
+                                <td id="col-date ">1/3/2020</td>
+                                <td id="col-id ">1000</td>
+                                <td id="col-name ">ABC SDN BHD</td>
+                                <td id="col-receipt ">1010</td>
+                                <td class="col-amount">5000</td>
+
+
+                            </tr>
+
+                        </tbody>
+
+
+
+
+
+
+                    </table>
+
+
+                </div>
+                <!-- </div> -->
+
+                <!--<footer>
+
+                    <div class="patientFooter ">
+                        <div class="c " style="margin-right:4.5%; ">
+                            <a href=" "><i class="fas fa-plus "></i></a>
+                        </div>
+
+
+                        <div class=" c " style="margin-right:3.6%; " id="printerbtn">
+                            <a><img src="src/img/printer.png " alt=" "></a>
+                        </div>
+                        <div class=" c " style="margin-right:12%; " id="deletebtn">
+                            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+                        </div>
+                    </div>
+
+                </footer>-->
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-icons">
+        <div class="c" style="margin-right:6%;">
+            <a href=" "><i class="fas fa-plus "></i></a>
+        </div>
+
+        <div class="c" style="margin-right:6%;" id="printerbtn">
+            <a><img src="src/img/printer.png" alt="" class="icon-20" />
+            </a>
+        </div>
+        <div class=" c " style="margin-right:3%; " id="dlbtn">
+            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+        </div>
+
+    </div>
+
+
+    <script src=" src/js/loggedin.js ">
+    </script>
+
+    <!-- <script src="src/js/appointment.js">
+            </script> -->
+
+    <script src="src/js/purchase.js">
+    </script>
+    <!-- for collapsing sidebar -->
+    <script type="text/javascript ">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+            $('.x').on('click', function() {
+                $("#input-label-1").focus();
+            });
+            $('.y').on('click', function() {
+                $("#input-label-2").focus();
+            });
+
+            $('#printerbtn').on('click', function (){
+                $('#printModal').show();
+                $('#vendorSection').hide();
+            })
+            $('#vendorSlc').on('click', function(){
+                $('#dateSection').hide();
+                $('#vendorSection').show();
+            })
+            $('#dateSlc').on('click', function(){
+                $('#vendorSection').hide();
+                $('#dateSection').show();
+            })
+        });
+    </script>
+
+</body>
+
+</html>

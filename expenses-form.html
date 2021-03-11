@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/layout_small.css" />
+
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="icon" href="src/img/doctor.ico" />
+    <link rel="stylesheet" href="styles/expenses-form.css">
+    <!--<link rel="stylesheet" href="styles/appointment.css">-->
+    <link rel="stylesheet" href="styles/footer-icons.css">
+    <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Include English language -->
+    <script src="node_modules/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+
+
+    <!-- <script src="src/js/appointment.js"></script> -->
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href=""><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Billing</a>
+        <a href="#service" class="nav-active"><img src="src/img/prescription.svg" alt="" />Expenses</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts</a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup</a>
+    </div>
+
+    <div class="main" id="content">
+        <h1>EXPENSES</h1>
+        <div class="expense">
+            <div id="appmModal" class="modal">
+
+
+                <div class="appmModal-content">
+                    <form>
+                        <ul class="modal-outer">
+                            <li>
+                                <label for="starting-pat-id">Starting Patient ID</label>
+                                <select id="starting-pat-id" class="">
+                                            <option value="ja19110000004">JA19110000004</option>
+                                        </select>
+                            </li>
+                            <li>
+                                <label for="ending-pat-id">Ending Patient ID</label>
+                                <select id="ending-pat-id">
+                                            <option value="ja19110000004">JA19110000004</option>
+                                        </select>
+                            </li>
+                            <li>
+                                <label for="ending-pat-id">Starting Date</label>
+                                <input type="text" id="jqdate1" class="datepicker-here" data-language='en'>
+                                <a href="#"><i id="dateicon1" class="far fa-calendar-alt x1"></i></a>
+                            </li>
+                            <li>
+                                <label for="ending-pat-id">Ending Date</label>
+                                <input type="text" id="jqdate2" class="datepicker-here" data-language='en'>
+                                <a href="#"><i id="dateicon2" class="far fa-calendar-alt y1"></i></a>
+                            </li>
+
+                        </ul>
+
+                    </form>
+                    <div class="text-center">
+                        <button class="btn" type="submit">PRINT</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--printmodal ends-->
+            <!--Save modal-->
+            <div id="saveModal" class="modal">
+
+
+                <div class="saveModal-content">
+
+                    <p class="delp">Want to save the changes made?</p>
+
+                    <button class="btn" id="btn1">Yes</button>
+                    <button class="btn" id="btn2">No</button>
+                </div>
+
+            </div>
+            <!--delete modal-->
+            <div id="deleteModal" class="modal">
+                <div class="saveModal-content">
+                    <p class="delp">Are you sure to delete?</p>
+                    <button class="btn" id="btn1">Yes</button>
+                    <button class="btn" id="btn2">No</button>
+                </div>
+            </div>
+            <div id="cl-button">
+                <a href="#"><i class="fas fa-times-circle" style="font-size:30px;color:rgb(66, 65, 65);"></i></a>
+            </div>
+            <form>
+                <div class="form-section">
+                    <label for="voucher" class="lb-form">Voucher No</label>
+                    <input type="text" name="voucher" class="field">
+                </div>
+                <div class="form-section">
+                    <label for="account" class="lb-form">Account Code</label>
+                    <select type="text" name="account" class="field">
+                        <option value="1"></option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="accountName" class="lb-form">Account Name</label>
+                    <input type="text" name="accountName" class="field-full">
+                </div>
+                <div class="form-section">
+                    <label for="Date" class="lb-form">Date</label>
+                    <input type="text" id="jqdate" name="Date" class="field datepicker-here" data-language='en'>
+
+                    <a href="#"><i id="date4" class="far fa-calendar-alt x"></i></a>
+                </div>
+                <div class="form-section">
+                    <label for="amount" class="lb-form">Amount</label>
+                    <input type="text" name="amount" class="field">
+                </div>
+                <div class="form-section">
+                    <label for="Particulars" class="lb-form">Particulars</label>
+                    <input type="text" name="Particulars" class="field-full">
+                    <!--<input type="text" name="Particulars" class="field-full ml-30">-->
+                </div>
+                <div class="form-section-last">
+                    <label for="Particulars" class="lb-form"></label>
+                    <input type="text" name="Particulars2" class="field-full">
+                </div>
+                <!--<div class="text-center mt-3">
+                    <button class="btn-sub mb-2">SUBMIT</button>
+                </div>-->
+                <input id="inreg-submit" name="register" type="submit" value="SUBMIT" />
+            </form>
+
+        </div>
+
+    </div>
+    <div class="footer-icons2">
+        <div class="c" style="margin-right:6%;" id="printerbtn">
+            <a><img src="src/img/printer.png" alt="" class="icon-20" />
+            </a>
+        </div>
+        <div class=" c " style="margin-right:3%; " id="deletebtn">
+            <a><img src="src/img/rubbish-bin.png " alt=" "></a>
+        </div>
+    </div>
+
+
+    <script src="src/js/loggedin.js">
+    </script>
+    <!-- <script src="src/js/patient.js"></script> -->
+    <script src="src/js/expenses.js">
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+            $('.x').on('click', function() {
+                $("#jqdate").focus();
+            });
+        });
+    </script>
+</body>
+
+</html>

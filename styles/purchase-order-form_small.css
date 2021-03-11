@@ -1,0 +1,53 @@
+body{overflow: hidden;}
+.LISTING-box{
+    overflow-y: hidden !important;
+}
+@media(min-width:1200px){
+    #content{
+        width: 82vw;
+    }
+   
+}
+@media (max-width:1200px) and (min-width:1091px){
+    #content{
+        width: 77vw;
+    }
+    .changedinp{
+        width:72% !important;
+    }
+    .orderlb2{
+        width: 25%;
+    }
+}
+
+@media(max-width:1090px){
+   #dateicon{
+    margin: 1.3vh -2.5vw;
+   }
+    
+}
+@media(max-width:900px){
+    .changedinp{
+        width:72% !important;
+    }
+    .orderlb2{
+        width: 25%;
+    }
+    .code-No{
+        width: 10vw;
+    }
+}
+@media(max-width:800px){
+    .orderBox-title{
+        width: 38%;
+    }
+    .orderlb2{
+        width: 28%;
+    }
+    .orderlb{
+        width: 23%;
+    }
+    .code-No{
+        width: 10vw;
+    }
+}

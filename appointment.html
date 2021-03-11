@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://use.fontawesome.com/1cdb6c68ea.js"></script>
+    <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles/layout_small.css" />
+
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="icon" href="src/img/doctor.ico" />
+    <link rel="stylesheet" href="styles/appointment.css">
+    <link rel="stylesheet" href="styles/appointment_small.css">
+    <link rel="stylesheet" href="styles/footer-icons.css">
+
+    <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css" />
+    <script src="node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Include English language -->
+    <script src="node_modules/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+
+    <!-- <script src="src/js/appointment.js"></script> -->
+</head>
+
+<body>
+    <nav class="wrapper">
+        <div id="box1">
+            <img class="header" id="logoimg" src="src/img/heading.png" alt="ClinicCareLogo" />
+        </div>
+
+        <h1 id="box2">
+            <div style="font-weight:lighter;font-size: medium;" id="timezonetext">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </h1>
+
+
+        <div class="dropdown3 " id="searchbar">
+            <a href="#" class="searching-button"><img class="nav-icon" src="src/img/magnify-glass.svg" alt="" /></a>
+
+            <!--input update-->
+            <input type="text" name="search" style="padding-left:6%;" />
+            <div class="dropdown-content3" style="width:800px; margin-right:15px;">
+                <input type="radio" name="src">
+                <p>Search by ID</p>
+                <input type="radio" name="src">
+                <p>Search by Name</p>
+            </div>
+            <!--input update finish-->
+        </div>
+
+
+        <div class="nav-images" id="box3">
+            <!--<a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+            <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>-->
+            <div class="sets iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/settings.png" alt="" /></a>
+            </div>
+            <div class="dropdown iconresize">
+                <a href="#" class="nav-logos"><img src="src/img/notification.png" alt="" /></a>
+                <div class="dropdown-content" style="width:800px; margin-right:15px;">
+                    <a href="#">You have missed an appointment</a>
+                    <a href="#">Clear all notification</a>
+                </div>
+            </div>
+
+
+            <div class="dropdown2 iconresize">
+                <a href="# " class="nav-logos"><img src="src/img/user.png " alt=" " /></a>
+                <div class="dropdown-content2" style="width:800px; margin-right:15px;">
+                    <a href="#">My Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+            <div>
+                <!-- to make sidebar collapse on small screens -->
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary ">
+                    <i class="fas fa-align-left "></i>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar" id="sbar">
+        <a href="#home"><img src="src/img/patient.svg" />Patients</a>
+        <a href="#service" class="nav-active"><img src="src/img/appointment-icon.svg" alt="" />Appointments</a>
+        <a href=""><img src="src/img/diagnostic.svg" alt="" />Diagnostic Report</a>
+        <a href=""><img src="src/img/finance.svg" alt="" />Billing</a>
+        <a href=""><img src="src/img/prescription.svg" alt="" />Expenses</a>
+        <a href=""><img src="src/img/inventory.svg" alt="" />Inventory</a>
+        <a href="#service"><img src="src/img/mc.svg" alt="" />Medical Certificate</a>
+        <a href="#clients"><img src="src/img/cash.svg" alt="" />Payment & Receipts</a>
+        <a href="#contact"><img src="src/img/settings-tools (1).svg" alt="" />Backup & Table Setup</a>
+    </div>
+    <div class="main" id="content">
+        <!--Appm modal-->
+        <div id="appmModal" class="modal">
+
+
+            <div class="appmModal-content">
+                <form>
+                    <ul class="modal-outer">
+                        <li>
+                            <label for="starting-pat-id">Starting Patient ID</label>
+                            <select id="starting-pat-id">
+                                <option value="optional" disabled selected hidden></option>
+                                <option value="ja19110000004">JA19110000004</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="ending-pat-id">Ending Patient ID</label>
+                            <select id="ending-pat-id">
+                                <option value="optional" disabled selected hidden></option>
+                                <option value="ja19110000004">JA19110000004</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="starting-date">Starting Date</label>
+                            <input type="text" id="starting-date" class='datepicker-here' data-language='en'>
+                            <a href="#"><i id="dateicon" class="far fa-calendar-alt"></i></a>
+                        </li>
+                        <li>
+                            <label for="ending-date">Ending Date</label>
+                            <input type="text" id="ending-date" class='datepicker-here' data-language='en'>
+                            <a href="#"><i id="dateicon" class="far fa-calendar-alt"></i></a>
+                        </li>
+                        <li>
+                            <label for="status-pat">Status</label>
+                            <select id="status-pat">
+                                <option value="optional" disabled selected hidden></option>
+                                <option value="awaiting">Awaiting</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </li>
+                    </ul>
+
+                </form>
+                <button>PRINT</button>
+
+            </div>
+
+        </div>
+        <!--Appm modal-->
+        <h1>Appointments</h1>
+        <div class="d-flex">
+            <div class="card calender-wrapper d-grid">
+                <div class="form-inline chead">
+
+                    <button id="previous" onclick="previous()">&#60;</button>
+                    <h2 class="card-header" id="monthAndYear" data-language='en' data-min-view="months" data-view="months" data-date-format="MM yyyy"></h2>
+                    <button id="next" onclick="next()">&#62;</button>
+                </div>
+
+                <table class="table table-bordered table-responsive-sm" id="calendar">
+
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="calendar-body">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="info-date">
+                <div class="d-grid">
+                    <div class="d-flex">
+                        <span class="col-20 text-gray-light">Show</span>
+                        <span class="col-20 text-gray-light">Status</span>
+                        <label class="col-10 ml-1 label-from" for="from">From</label>
+                        <input type='text' id="start_date" class='date col-40 ml-1 start_date datepicker-here' data-language='en' />
+                        <a href="#"><i id="date1" class="far fa-calendar-alt x"></i></a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="custom-select">
+
+                        <select class="col-20 day" name="Show" id="Show" placeholder="Today">
+                            <option value="" disabled selected hidden>Today</option>
+                            <option value="week">This week</option>
+                            <option value="month">This month</option>
+                        </select>
+                    </div>
+                    <div class="custom-select">
+
+                        <select class="col-20 day" name="All" id="All">
+                            <option value="All">All</option>
+                            <option value="All">Awaiting</option>
+                            <option value="All">Cancelled</option>
+                            <option value="All">Completed</option>
+                        </select>
+                    </div>
+                    <label class="col-10 ml-1 mt-5px label-to" for="to">To</label>
+                    <!-- <input type="text" class="date col-40 ml-1 mt-5px end_date" id="end_date"> -->
+                    <input type='text' id="end_date" class='date col-40 mt-5px  end_date datepicker-here' data-language='en' />
+
+                    <a href="#"><i id="date2" class="far fa-calendar-alt y"></i></a>
+                </div>
+                <div class="show-hours mt-1">
+                    <span>9.00 - 10.00 AM</span>
+                </div>
+                <div class="d-flex line mt-1">
+                    <span class="col-35">Patient ID</span>
+                    <span class="col-35">JA191100001</span>
+                </div>
+                <div class="d-flex line">
+                    <span class="col-35">Patient Name</span>
+                    <span class="col-35">Jane Doe</span>
+                </div>
+                <div class="d-flex line">
+                    <span class="col-35">Doctor ID</span>
+                    <span class="col-35">JA0001</span>
+                </div>
+                <div class="d-flex line">
+                    <span class="col-35">Doctor Name</span>
+                    <span class="col-35">Jane Doe</span>
+                </div>
+                <div class="d-flex line mb-1">
+                    <span class="col-35">Status</span>
+                    <div class="status-completed">
+                        <span>Completed</span>
+                    </div>
+                </div>
+                <div class="show-hours mt-1">
+                    <span>1.00 - 2.00 PM</span>
+                </div>
+                <div class="d-flex line mt-1">
+                    <span class="col-35">Patient ID</span>
+                    <span class="col-35">JA191100002</span>
+                </div>
+                <div class="d-flex line">
+                    <span class="col-35">Patient Name</span>
+                    <span class="col-35">John Doe</span>
+                </div>
+                <div class="d-flex line">
+                    <span class="col-35">Doctor ID</span>
+                    <span class="col-35">JA0001</span>
+                </div>
+                <div class="d-flex line">
+                    <span class="col-35">Doctor Name</span>
+                    <span class="col-35">Jane Doe</span>
+                </div>
+                <div class="d-flex line mb-1">
+                    <span class="col-35">Status</span>
+                    <div class="status-awaiting">
+                        <span>Awaiting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer-icons">
+        <div class="c" style="margin-right:6%;">
+            <a href=" "><i class="fas fa-plus" style="color:gray;"></i></a>
+        </div>
+
+        <div class="c" style="margin-right:6%;">
+            <a href=" "><img class="icon-20" src="src/img/writing.png" alt="" />
+            </a>
+        </div>
+        <div class="c" style="margin-right:1%;" id="printerbtn">
+            <a><img src="src/img/printer.png" alt="" class="icon-20" />
+            </a>
+        </div>
+
+    </div>
+
+
+    <script src="src/js/loggedin.js">
+    </script>
+    <script src="src/js/appointment.js">
+    </script>
+    <script type="text/javascript" src="src/js/caleandar.js"></script>
+    <script type="text/javascript" src="src/js/demo.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sbar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+            
+            //updated js
+            $(".card-header").on("click", function() {
+                $(".card-header").datepicker().css("z-index", "999");
+            });
+            $('.x').on('click', function() {
+                $("#start_date").focus();
+            });
+            $('.y').on('click', function() {
+                $("#end_date").focus();
+            });
+        });
+    </script>
+</body>
+
+</html>
